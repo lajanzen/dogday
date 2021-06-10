@@ -9,7 +9,7 @@
 :root {
   /* FONTS */
   --font-family: "Roboto", sans-serif;
-  --font-heading: "Do Hyeon", sans-serif;
+  --button-font: "Do Hyeon", sans-serif;
 
   /* COLORS */
   --primary-background-color: #fff;
@@ -19,4 +19,5 @@
   --primary-text-color: #707070;
   --button-text-color: #324658;
   --input-text-color: #000;
+  --shadow-color: #d1d1d1;
 }
