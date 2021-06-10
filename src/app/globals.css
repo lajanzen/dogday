@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Roboto:wght@400;500;700&family=Stint+Ultra+Condensed&display=swap");
+
 *,
 *::after,
 *::before {
@@ -5,6 +7,10 @@
 }
 
 :root {
+  /* FONTS */
+  --font-family: "Roboto", sans-serif;
+  --font-heading: "Do Hyeon", sans-serif;
+
   /* COLORS */
   --primary-background-color: #fff;
   --secondary-background-color: #f2f0ec;
