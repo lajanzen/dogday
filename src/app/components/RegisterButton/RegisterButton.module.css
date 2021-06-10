@@ -1,5 +1,9 @@
-.RegisterButton {
+.registerButton {
   border: none;
-  color: pink;
-  background-color: aqua;
+  background-color: var(--secondary-color);
+  color: var(--button-text-color);
+  font-family: var(--button-font);
+  padding: 1em 4em;
+  border-radius: 3em;
+  box-shadow: 0 0.15em 0.35em var(--shadow-color);
 }
