@@ -1,13 +1,13 @@
 import React from "react";
-import BackButton from "./BackButton";
+import RoundButton from "./RoundButton";
 
 export default {
   title: "Component/BackButton",
-  component: BackButton,
+  component: RoundButton,
 };
 
-export const Back = (): JSX.Element => (
-  <BackButton>
+export const BackButton = (): JSX.Element => (
+  <RoundButton>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="11.521"
@@ -34,5 +34,5 @@ export const Back = (): JSX.Element => (
         />
       </g>
     </svg>
-  </BackButton>
+  </RoundButton>
 );
