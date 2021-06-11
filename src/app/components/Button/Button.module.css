@@ -6,7 +6,7 @@
   font-size: 1.25em;
 }
 
-.button-primary {
+.button--primary {
   background-color: var(--secondary-color);
   padding: 1em 4em;
   border-radius: 3em;

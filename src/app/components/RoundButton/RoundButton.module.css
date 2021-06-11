@@ -1,9 +1,0 @@
-.roundButton {
-  border: none;
-  background-color: var(--secondary-color);
-  color: var(--button-text-color);
-  border-radius: 50%;
-  box-shadow: 0 0.15em 0.35em var(--shadow-color);
-  width: 3.5em;
-  height: 3.5em;
-}
