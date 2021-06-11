@@ -1,0 +1,21 @@
+.link {
+  border: none;
+  box-shadow: 0 0.15em 0.35em var(--shadow-color);
+  color: var(--button-text-color);
+  font-family: var(--button-font);
+  font-size: 1.25em;
+  text-decoration: none;
+}
+
+.link--primary {
+  background-color: var(--secondary-color);
+  padding: 1em 4em;
+  border-radius: 3em;
+}
+
+.link--secondary {
+  background-color: var(--primary-color);
+  color: var(--button-text-color);
+  padding: 1em 4em;
+  border-radius: 3em;
+}
