@@ -2,7 +2,7 @@ import React from "react";
 import RoundButton from "./RoundButton";
 
 export default {
-  title: "Component/BackButton",
+  title: "Component/RoundButton",
   component: RoundButton,
 };
 
