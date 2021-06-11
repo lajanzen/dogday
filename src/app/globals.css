@@ -18,6 +18,8 @@
   --secondary-color: #04d4ce;
   --primary-text-color: #707070;
   --button-text-color: #324658;
+  --primary-button-active-color: #2fc1bd;
+  --secondary-button-active-color: #e0aa21;
   --input-text-color: #000;
   --shadow-color: #d1d1d1;
 }
