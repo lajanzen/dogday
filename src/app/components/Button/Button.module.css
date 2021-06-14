@@ -10,6 +10,7 @@
   background-color: var(--secondary-color);
   padding: 1em 4em;
   border-radius: 3em;
+  width: 100%;
 }
 
 .button--secondary {
@@ -17,12 +18,19 @@
   color: var(--button-text-color);
   padding: 1em 4em;
   border-radius: 3em;
+  width: 100%;
 }
 
 .button--round {
   background-color: var(--secondary-color);
   color: var(--button-text-color);
   border-radius: 50%;
-  width: 3.5em;
-  height: 3.5em;
+  width: 2.5em;
+  height: 2.5em;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  position: absolute;
+  top: 1em;
+  left: 1em;
 }
