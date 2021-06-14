@@ -6,7 +6,6 @@ type LabeledInputProps = {
   value: string;
   type?: string;
   id: string;
-  htmlFor: string;
   required?: boolean;
   onChange: (value: string) => void;
 };
