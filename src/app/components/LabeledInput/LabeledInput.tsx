@@ -17,12 +17,11 @@ function LabeledInput({
   type,
   required,
   id,
-  htmlFor,
   onChange,
 }: LabeledInputProps): JSX.Element {
   return (
     <div className={styles.container}>
-      <label className={styles.container__label} htmlFor={htmlFor}>
+      <label className={styles.container__label} htmlFor={id}>
         {label}
       </label>
 
