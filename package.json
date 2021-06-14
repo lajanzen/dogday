@@ -10,9 +10,10 @@
     "build": "npm run server:build && npm run client:build && npm run storybook:build",
     "serve": "vite preview",
     "prepare": "husky install",
-    "test": "tsc && prettier --check . && eslint . && stylelint \"**/*.css\"",
+    "test": "tsc && prettier --check . && eslint . && stylelint \"**/*.css\" && npm run jest",
     "storybook": "start-storybook -s src/app/assets -p 6006",
-    "start": "node dist/server.js"
+    "start": "node dist/server.js",
+    "jest": "jest"
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",
