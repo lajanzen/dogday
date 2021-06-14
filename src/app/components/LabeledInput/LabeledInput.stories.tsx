@@ -7,5 +7,11 @@ export default {
 };
 
 export const Email = (): JSX.Element => (
-  <LabeledInput label="E-Mail" value="" onChange={console.log} />
+  <LabeledInput
+    label="E-Mail"
+    id="mail"
+    htmlFor="mail"
+    value=""
+    onChange={console.log}
+  />
 );
