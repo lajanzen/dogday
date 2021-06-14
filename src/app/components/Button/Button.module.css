@@ -4,12 +4,14 @@
   color: var(--button-text-color);
   font-family: var(--button-font);
   font-size: 1.25em;
+  width: 100%;
 }
 
 .button--primary {
   background-color: var(--secondary-color);
   padding: 1em 4em;
   border-radius: 3em;
+  width: 100%;
 }
 
 .button--secondary {
@@ -17,6 +19,7 @@
   color: var(--button-text-color);
   padding: 1em 4em;
   border-radius: 3em;
+  width: 100%;
 }
 
 .button--round {
