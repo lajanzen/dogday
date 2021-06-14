@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../../components/Button/Button";
+import LinkComponent from "../../components/LinkComponent/LinkComponent";
 import styles from "./LandingPage.module.css";
 
 function LandingPage(): JSX.Element {
@@ -7,9 +7,15 @@ function LandingPage(): JSX.Element {
     <main className={styles.container}>
       <img className={styles.logo} src={"/mainLogo.png"} alt={"logo"} />
 
-      <Button variant="primary">Hund Registrieren</Button>
-      <Button variant="primary">Hundesitter werden</Button>
-      <Button variant="secondary">Log-In</Button>
+      <LinkComponent link="#" variant="primary">
+        Hund Registrieren
+      </LinkComponent>
+      <LinkComponent link="#" variant="primary">
+        Hundesitter werden
+      </LinkComponent>
+      <LinkComponent link="#" variant="secondary">
+        Log-In
+      </LinkComponent>
     </main>
   );
 }
