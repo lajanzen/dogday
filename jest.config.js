@@ -1,3 +1,5 @@
+// REQUIRED FOR TESTING //
+
 module.exports = {
   testEnvironment: "jsdom",
   moduleNameMapper: {
