@@ -7,9 +7,10 @@ type ButtonProps = {
   onClick?: () => void;
 };
 
-function Button({ children, variant }: ButtonProps): JSX.Element {
+function Button({ children, variant, onClick }: ButtonProps): JSX.Element {
   return (
     <button
+      onClick={onClick}
       className={
         variant
           ? `${styles[`button--${variant}`]} ${styles.button}`
