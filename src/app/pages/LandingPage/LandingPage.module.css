@@ -6,6 +6,7 @@
   row-gap: 2em;
   margin: 5em 2.5em 0;
   height: auto;
+  max-width: 30em;
 }
 
 .logo {
