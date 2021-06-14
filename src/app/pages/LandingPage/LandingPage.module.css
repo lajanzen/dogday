@@ -1,14 +1,14 @@
 .container {
   display: grid;
-  grid-template-rows: 50% 1fr 1fr 25%;
+  grid-template-rows: 60% 1fr 1fr 25%;
   justify-items: center;
   align-items: end;
   row-gap: 2em;
-  margin: 0 2.5em;
-  height: 100%;
+  margin: 5em 2.5em 0;
+  height: auto;
 }
 
 .logo {
   width: 90%;
-  padding-bottom: 3em;
+  align-self: center;
 }
