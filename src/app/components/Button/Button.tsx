@@ -10,6 +10,7 @@ type ButtonProps = {
 function Button({ children, variant }: ButtonProps): JSX.Element {
   return (
     <button
+      onClick={() => alert("Hello World!")}
       className={
         variant
           ? `${styles[`button--${variant}`]} ${styles.button}`
