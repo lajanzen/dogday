@@ -41,3 +41,7 @@
   place-content: center;
   place-items: center;
 }
+
+.link--round:active {
+  background-color: var(--secondary-color);
+}
