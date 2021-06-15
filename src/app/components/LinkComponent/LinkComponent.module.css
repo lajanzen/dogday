@@ -6,12 +6,14 @@
   font-size: 1.25em;
   text-decoration: none;
   transition: ease-in-out background-color 170ms;
+  text-align: center;
 }
 
 .link--primary {
   background-color: var(--secondary-color);
   padding: 1em 4em;
   border-radius: 3em;
+  width: 100%;
 }
 
 .link--primary:active {
@@ -23,6 +25,7 @@
   color: var(--button-text-color);
   padding: 1em 4em;
   border-radius: 3em;
+  width: 100%;
 }
 
 .link--secondary:active {
