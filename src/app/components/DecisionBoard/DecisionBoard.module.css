@@ -1,3 +1,8 @@
 .container {
   display: flex;
+  justify-content: space-around;
+  background-color: var(--secondary-color);
+  padding: 1.2em;
+  border-top-right-radius: 2em;
+  border-bottom-right-radius: 2em;
 }

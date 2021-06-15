@@ -8,10 +8,10 @@ function DecisionBoard(): JSX.Element {
   return (
     <div className={styles.container}>
       <Button variant="round-border">
-        <YesIcon />
+        <NoIcon />
       </Button>
       <Button variant="round-border">
-        <NoIcon />
+        <YesIcon />
       </Button>
     </div>
   );
