@@ -1,0 +1,15 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, auto) 1fr;
+  gap: 1em;
+  background-color: var(--secondary-background-color);
+  padding: 2em 0 1.5em 2em;
+  border-bottom-left-radius: 1.5em;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  right: 0.5em;
+  max-height: 5em;
+}
