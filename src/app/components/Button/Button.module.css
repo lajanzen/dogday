@@ -1,5 +1,4 @@
 .button {
-  border: none;
   box-shadow: 0 0.15em 0.35em var(--shadow-color);
   color: var(--button-text-color);
   font-family: var(--button-font);
@@ -7,6 +6,7 @@
 }
 
 .button--primary {
+  border: none;
   background-color: var(--secondary-color);
   padding: 1em 4em;
   border-radius: 3em;
@@ -14,6 +14,7 @@
 }
 
 .button--secondary {
+  border: none;
   background-color: var(--primary-color);
   color: var(--button-text-color);
   padding: 1em 4em;
@@ -22,6 +23,7 @@
 }
 
 .button--round {
+  border: none;
   background-color: var(--secondary-color);
   color: var(--button-text-color);
   border-radius: 50%;
@@ -33,4 +35,15 @@
   position: absolute;
   top: 1em;
   left: 1em;
+}
+
+.button--round-border {
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  border: 0.3em solid var(--primary-background-color);
+  width: 4.5em;
+  height: 4.5em;
+  display: flex;
+  place-content: center;
+  place-items: center;
 }

@@ -16,3 +16,7 @@ export const RegisterSitter = (): JSX.Element => (
 export const LogIn = (): JSX.Element => (
   <Button variant="secondary">Log-In</Button>
 );
+
+export const No = (): JSX.Element => (
+  <Button variant="round-border">Log-In</Button>
+);
