@@ -13,7 +13,7 @@ function LandingPage(): JSX.Element {
       <LinkComponent link="#" variant="primary">
         Hundesitter werden
       </LinkComponent>
-      <LinkComponent link="#" variant="secondary">
+      <LinkComponent link="/login" variant="secondary">
         Log-In
       </LinkComponent>
     </main>
