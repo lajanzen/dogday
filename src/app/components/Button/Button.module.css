@@ -4,7 +4,6 @@
   color: var(--button-text-color);
   font-family: var(--button-font);
   font-size: 1.25em;
-  width: 100%;
 }
 
 .button--primary {
