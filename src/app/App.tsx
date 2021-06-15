@@ -14,7 +14,7 @@ const routes: CustomRouteProps[] = [
 
 function App(): JSX.Element {
   return (
-    <div className={styles.container}>
+    <div className={styles.App}>
       <BrowserRouter>
         <Switch>
           {routes.map(({ Component, ...routeProps }) => (
