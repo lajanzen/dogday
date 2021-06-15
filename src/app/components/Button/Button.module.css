@@ -13,6 +13,10 @@
   width: 100%;
 }
 
+.button--primary:active {
+  background-color: var(--primary-button-active-color);
+}
+
 .button--secondary {
   border: none;
   background-color: var(--primary-color);
@@ -20,6 +24,10 @@
   padding: 1em 4em;
   border-radius: 3em;
   width: 100%;
+}
+
+.button--secondary:active {
+  background-color: var(--secondary-button-active-color);
 }
 
 .button--round {
@@ -37,6 +45,10 @@
   left: 1em;
 }
 
+.button--round:active {
+  background-color: var(--primary-button-active-color);
+}
+
 .button--round-border {
   background-color: var(--primary-color);
   border-radius: 50%;
@@ -46,4 +58,8 @@
   display: flex;
   place-content: center;
   place-items: center;
+}
+
+.button--round-border:active {
+  background-color: var(--secondary-button-active-color);
 }
