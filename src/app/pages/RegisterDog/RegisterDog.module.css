@@ -1,0 +1,17 @@
+.main__form {
+  margin: 2em 1em 3em;
+  padding: 7em 1.5em 2em;
+  display: grid;
+  grid-template-rows: repeat(6, auto) 5em;
+  align-items: flex-end;
+  row-gap: 1.5em;
+  background-color: var(--secondary-background-color);
+  border-radius: 1em;
+}
+
+.header__logo {
+  position: absolute;
+  top: 0;
+  right: 0.5em;
+  max-height: 5em;
+}
