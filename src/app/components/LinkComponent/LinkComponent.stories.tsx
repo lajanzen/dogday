@@ -23,3 +23,9 @@ export const LogIn = (): JSX.Element => (
     Log-In
   </LinkComponent>
 );
+
+export const Profile = (): JSX.Element => (
+  <LinkComponent link="#" variant="round">
+    P
+  </LinkComponent>
+);
