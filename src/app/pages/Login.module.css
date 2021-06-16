@@ -1,33 +1,30 @@
 .container {
   display: grid;
-  grid-template-rows: 10% 37% auto;
-  row-gap: 2em;
+  grid-template-rows: 40% auto;
+  row-gap: 3em;
   margin: 1.5em;
-  max-width: 30em;
 }
 
 .header {
-  grid-row-start: 2;
-  display: flex;
-  align-items: baseline;
-  justify-content: center;
+  display: grid;
+  gap: 2.5em;
 }
 
 .header__logo {
   width: 90%;
+  place-self: center;
 }
 
 .main {
   width: 100%;
-  grid-row-start: 3;
 }
 
 .form {
   background-color: var(--secondary-background-color);
   display: grid;
-  grid-template-rows: 1fr 1fr 14em;
+  grid-template-rows: 1fr 1fr 10em;
   align-items: center;
   row-gap: 1.2em;
   border-radius: 0.5em;
-  padding: 2em 1em 0;
+  padding: 2em 1em 3em;
 }
