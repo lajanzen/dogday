@@ -8,7 +8,7 @@ function SearchIcon(): JSX.Element {
       height="23.826"
       viewBox="0 0 22.576 23.826"
     >
-      <g id="Group_89" data-name="Group 89" transform="translate(963 -79)">
+      <g transform="translate(963 -79)">
         <g
           transform="translate(-963 79)"
           fill="none"
