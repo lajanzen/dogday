@@ -31,3 +31,17 @@
 .link--secondary:active {
   background-color: var(--secondary-button-active-color);
 }
+
+.link--round {
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  display: flex;
+  place-content: center;
+  place-items: center;
+}
+
+.link--round:active {
+  background-color: var(--secondary-color);
+}
