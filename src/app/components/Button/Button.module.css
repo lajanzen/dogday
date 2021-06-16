@@ -11,6 +11,7 @@
   padding: 1em 4em;
   border-radius: 3em;
   width: 100%;
+  max-height: 3.2em;
 }
 
 .button--secondary {
@@ -19,6 +20,7 @@
   padding: 1em 4em;
   border-radius: 3em;
   width: 100%;
+  max-height: 3.2em;
 }
 
 .button--round {
@@ -30,7 +32,4 @@
   display: flex;
   place-content: center;
   place-items: center;
-  position: absolute;
-  top: 1em;
-  left: 1em;
 }
