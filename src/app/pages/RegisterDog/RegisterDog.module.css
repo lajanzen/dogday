@@ -8,7 +8,7 @@
 
 .main__form {
   display: grid;
-  grid-template-rows: 7em repeat(5, auto) 5em;
+  grid-template-rows: 7em repeat(5, auto) 6em;
   align-items: flex-end;
   row-gap: 1.5em;
 }
