@@ -1,6 +1,7 @@
 .container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 4em;
   background-color: var(--secondary-color);
   padding: 1.2em;
   border-top-right-radius: 2em;
