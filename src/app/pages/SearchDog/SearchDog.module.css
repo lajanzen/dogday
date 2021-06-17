@@ -1,0 +1,18 @@
+.header {
+  margin-left: 1em;
+}
+
+.main {
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  gap: 2em;
+  margin-top: 2em;
+}
+
+.main__profile {
+  justify-self: center;
+}
+
+.main__decisionBoard {
+  margin-right: 2em;
+}
