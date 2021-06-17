@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import BackButton from "../components/BackButton/BackButton";
-import Button from "../components/Button/Button";
-import LabeledInput from "../components/LabeledInput/LabeledInput";
+import BackButton from "../../components/BackButton/BackButton";
+import Button from "../../components/Button/Button";
+import LabeledInput from "../../components/LabeledInput/LabeledInput";
 import styles from "./Login.module.css";
 
 function Login(): JSX.Element {
