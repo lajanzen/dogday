@@ -4,7 +4,7 @@ import styles from "./LinkComponent.module.css";
 
 type LinkComponentProps = {
   children: ReactNode;
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "round";
   link: string;
 };
 
