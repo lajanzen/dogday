@@ -52,8 +52,8 @@
   background-color: var(--primary-color);
   border-radius: 50%;
   border: 0.3em solid var(--primary-background-color);
-  width: 4.5em;
-  height: 4.5em;
+  width: 4em;
+  height: 4em;
   display: flex;
   place-content: center;
   place-items: center;
