@@ -1,0 +1,19 @@
+.container {
+  display: grid;
+  gap: 0.2em;
+  color: var(--button-text-color);
+  font-family: var(--font-family);
+  font-size: 0.7em;
+}
+
+.label {
+  padding-left: 1em;
+}
+
+.dropdown {
+  color: var(--input-text-color);
+  border-color: var(--primary-text-color);
+  border-width: 0.02em;
+  border-radius: 3em;
+  padding: 0.8em 1em;
+}
