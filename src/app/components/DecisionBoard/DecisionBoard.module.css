@@ -7,4 +7,5 @@
   border-top-right-radius: 2em;
   border-bottom-right-radius: 2em;
   box-shadow: 0 0.15em 0.35em var(--shadow-color);
+  max-height: 7em;
 }
