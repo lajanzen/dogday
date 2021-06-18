@@ -1,18 +1,23 @@
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 2em;
+}
+
 .header {
   margin-left: 1em;
 }
 
 .main {
   display: grid;
-  grid-template-rows: auto auto 1fr;
   gap: 2em;
-  margin-top: 2em;
+  padding-bottom: 1em;
 }
 
 .main__profile {
   justify-self: center;
-  width: 100%;
-  padding: 0 1em;
+  margin: 0 1em;
 }
 
 .main__decisionBoard {
