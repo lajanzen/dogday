@@ -4,9 +4,13 @@ import Button from "../Button/Button";
 import YesIcon from "../Icons/YesIcon";
 import NoIcon from "../Icons/NoIcon";
 
-function DecisionBoard(): JSX.Element {
+type DecisionBoardProps = {
+  className?: string;
+};
+
+function DecisionBoard({ className }: DecisionBoardProps): JSX.Element {
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${className}`}>
       <Button variant="round-border">
         <NoIcon />
       </Button>

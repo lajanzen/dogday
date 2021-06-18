@@ -13,12 +13,13 @@ function SearchDog({ imgSrc, name, info }: ProfileCardProps): JSX.Element {
         <NavBar />
       </header>
       <main className={styles.main}>
-        <div className={styles.main__profile}>
-          <ProfileCard imgSrc={imgSrc} name={name} info={info} />
-        </div>
-        <div className={styles.main__decisionBoard}>
-          <DecisionBoard />
-        </div>
+        <ProfileCard
+          className={styles.main__profile}
+          imgSrc={imgSrc}
+          name={name}
+          info={info}
+        />
+        <DecisionBoard className={styles.main__decisionBoard} />
       </main>
     </div>
   );
