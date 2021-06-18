@@ -4,6 +4,7 @@ import { BrowserRouter, Switch, Route, RouteProps } from "react-router-dom";
 import LandingPage from "./pages/LandingPage/LandingPage";
 import RegisterDog from "./pages/RegisterDog/RegisterDog";
 import Login from "./pages/LoginPage/Login";
+import SearchDog from "./pages/SearchDog/SearchDog";
 import RegisterSitter from "./pages/RegisterSitter/RegisterSitter";
 
 type CustomRouteProps = RouteProps & {
@@ -16,6 +17,7 @@ const routes: CustomRouteProps[] = [
   { path: "/registerdog", Component: RegisterDog },
   { path: "/registersitter", Component: RegisterSitter },
   { path: "/login", Component: Login },
+  { path: "/searchdog", Component: SearchDog },
 ];
 
 function App(): JSX.Element {

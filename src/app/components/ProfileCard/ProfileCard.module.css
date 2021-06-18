@@ -1,8 +1,7 @@
 .container {
   display: grid;
-  grid-template: auto 4em / 1fr 1fr;
+  grid-template: 90% 10% / 1fr 1fr;
   background-color: var(--secondary-background-color);
-  width: fit-content;
   font-family: var(--font-family);
   color: var(--button-text-color);
   align-items: center;
@@ -12,8 +11,8 @@
 
 .profileImage {
   grid-column: span 2;
-  width: 22em;
-  height: 34em;
+  width: 100%;
+  height: 100%;
   border-top-left-radius: 2em;
   border-top-right-radius: 2em;
   object-fit: cover;
