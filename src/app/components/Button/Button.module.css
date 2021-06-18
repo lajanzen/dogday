@@ -8,10 +8,9 @@
 .button--primary {
   border: none;
   background-color: var(--secondary-color);
-  padding: 1em 4em;
   border-radius: 3em;
   width: 100%;
-  max-height: 3.2em;
+  height: 3em;
 }
 
 .button--primary:active {
@@ -21,11 +20,9 @@
 .button--secondary {
   border: none;
   background-color: var(--primary-color);
-  color: var(--button-text-color);
-  padding: 1em 4em;
   border-radius: 3em;
   width: 100%;
-  max-height: 3.2em;
+  height: 3em;
 }
 
 .button--secondary:active {
@@ -35,7 +32,6 @@
 .button--round {
   border: none;
   background-color: var(--secondary-color);
-  color: var(--button-text-color);
   border-radius: 50%;
   width: 2.5em;
   height: 2.5em;

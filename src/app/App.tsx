@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./App.module.css";
 import { BrowserRouter, Switch, Route, RouteProps } from "react-router-dom";
 import LandingPage from "./pages/LandingPage/LandingPage";
+import RegisterDog from "./pages/RegisterDog/RegisterDog";
 import Login from "./pages/LoginPage/Login";
 
 type CustomRouteProps = RouteProps & {
@@ -11,6 +12,7 @@ type CustomRouteProps = RouteProps & {
 
 const routes: CustomRouteProps[] = [
   { path: "/", Component: LandingPage, exact: true },
+  { path: "/registerdog", Component: RegisterDog },
   { path: "/login", Component: Login },
 ];
 
