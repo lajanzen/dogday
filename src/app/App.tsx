@@ -3,6 +3,7 @@ import styles from "./App.module.css";
 import { BrowserRouter, Switch, Route, RouteProps } from "react-router-dom";
 import LandingPage from "./pages/LandingPage/LandingPage";
 import Login from "./pages/LoginPage/Login";
+import SearchDog from "./pages/SearchDog/SearchDog";
 
 type CustomRouteProps = RouteProps & {
   Component: () => JSX.Element;
@@ -12,6 +13,7 @@ type CustomRouteProps = RouteProps & {
 const routes: CustomRouteProps[] = [
   { path: "/", Component: LandingPage, exact: true },
   { path: "/login", Component: Login },
+  { path: "/searchdog", Component: SearchDog },
 ];
 
 function App(): JSX.Element {
