@@ -9,6 +9,4 @@ export default {
   },
 };
 
-export const Karl = (): JSX.Element => (
-  <SearchDog imgSrc="/dog.png" name="Karl" info="Alter: 12 Wochen" />
-);
+export const Karl = (): JSX.Element => <SearchDog />;
