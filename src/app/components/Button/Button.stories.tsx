@@ -1,4 +1,6 @@
 import React from "react";
+import NoIcon from "../Icons/NoIcon";
+import YesIcon from "../Icons/YesIcon";
 import Button from "./Button";
 
 export default {
@@ -15,4 +17,16 @@ export const RegisterSitter = (): JSX.Element => (
 
 export const LogIn = (): JSX.Element => (
   <Button variant="secondary">Log-In</Button>
+);
+
+export const No = (): JSX.Element => (
+  <Button variant="round-border">
+    <NoIcon />
+  </Button>
+);
+
+export const Yes = (): JSX.Element => (
+  <Button variant="round-border">
+    <YesIcon />
+  </Button>
 );

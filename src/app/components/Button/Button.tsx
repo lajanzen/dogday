@@ -3,7 +3,7 @@ import styles from "./Button.module.css";
 
 type ButtonProps = {
   children: ReactNode;
-  variant?: "round" | "primary" | "secondary";
+  variant?: "round" | "primary" | "secondary" | "round-border";
   onClick?: () => void;
 };
 
