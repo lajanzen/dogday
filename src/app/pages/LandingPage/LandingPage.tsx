@@ -7,10 +7,10 @@ function LandingPage(): JSX.Element {
     <main className={styles.container}>
       <img className={styles.logo} src={"/mainLogo.png"} alt={"logo"} />
 
-      <LinkComponent link="#" variant="primary">
+      <LinkComponent link="/registerdog" variant="primary">
         Hund Registrieren
       </LinkComponent>
-      <LinkComponent link="#" variant="primary">
+      <LinkComponent link="/registersitter" variant="primary">
         Hundesitter werden
       </LinkComponent>
       <LinkComponent link="/login" variant="secondary">
