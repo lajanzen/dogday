@@ -8,15 +8,17 @@ import styles from "./NavBar.module.css";
 function NavBar(): JSX.Element {
   return (
     <div className={styles.container}>
-      <LinkComponent link="#" variant="round">
-        <ProfileIcon />
-      </LinkComponent>
-      <LinkComponent link="#" variant="round">
-        <HeartIcon />
-      </LinkComponent>
-      <LinkComponent link="#" variant="round">
-        <SearchIcon />
-      </LinkComponent>
+      <div className={styles.links}>
+        <LinkComponent link="#" variant="round">
+          <ProfileIcon />
+        </LinkComponent>
+        <LinkComponent link="#" variant="round">
+          <HeartIcon />
+        </LinkComponent>
+        <LinkComponent link="#" variant="round">
+          <SearchIcon />
+        </LinkComponent>
+      </div>
       <img className={styles.logo} src="/smallLogo.png" />
     </div>
   );

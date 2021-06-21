@@ -1,6 +1,6 @@
 .container {
   display: grid;
-  grid-template-rows: 40% auto;
+  grid-template-rows: auto auto;
   row-gap: 3em;
   margin: 1.5em;
 }
