@@ -1,0 +1,20 @@
+### Request all users
+GET http://localhost:6007/api/users HTTP/1.1
+Accept: application/json
+
+### Request a single user
+GET http://localhost:6007/api/users/user HTTP/1.1
+Accept: application/json
+
+### Add new user
+POST http://localhost:6007/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+"name": "user",
+"email": "user@mail.com",
+"phone": "0123456",
+"city": "Cologne",
+"experience": "Hunde-Profi",
+"password": "ilovedogs123"
+}
