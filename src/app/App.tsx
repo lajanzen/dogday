@@ -6,6 +6,7 @@ import RegisterDog from "./pages/RegisterDog/RegisterDog";
 import Login from "./pages/LoginPage/Login";
 import SearchDog from "./pages/SearchDog/SearchDog";
 import RegisterSitter from "./pages/RegisterSitter/RegisterSitter";
+import SearchSitter from "./pages/SearchSitter/SearchSitter";
 
 type CustomRouteProps = RouteProps & {
   Component: () => JSX.Element;
@@ -18,6 +19,7 @@ const routes: CustomRouteProps[] = [
   { path: "/registersitter", Component: RegisterSitter },
   { path: "/login", Component: Login },
   { path: "/searchdog", Component: SearchDog },
+  { path: "/searchsitter", Component: SearchSitter },
 ];
 
 function App(): JSX.Element {
