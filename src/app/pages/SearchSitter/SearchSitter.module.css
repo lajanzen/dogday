@@ -11,14 +11,14 @@
 
 .main {
   display: grid;
+  grid-template-rows: 1fr auto;
   gap: 1em;
   padding-bottom: 1em;
 }
 
 .main__profile {
   justify-self: center;
-  margin: 0 2em;
-  max-height: 100%;
+  width: calc(100% - 4em);
 }
 
 .main__decisionBoard {
