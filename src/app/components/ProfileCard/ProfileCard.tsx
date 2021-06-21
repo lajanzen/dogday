@@ -16,7 +16,9 @@ function ProfileCard({
 }: ProfileCardProps): JSX.Element {
   return (
     <div className={`${styles.container} ${className}`}>
-      <img className={styles.profileImage} src={imgSrc} alt="" />
+      <div className={styles.profileImageWrapper}>
+        <img className={styles.profileImage} src={imgSrc} alt="" />
+      </div>
       <span className={styles.profileName}>{name}</span>
       <span className={styles.profileInfo}>{info}</span>
     </div>
