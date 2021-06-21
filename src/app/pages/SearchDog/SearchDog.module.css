@@ -2,7 +2,7 @@
   height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr;
-  gap: 2em;
+  gap: 1em;
 }
 
 .header {
@@ -11,15 +11,16 @@
 
 .main {
   display: grid;
-  gap: 2em;
+  grid-template-rows: 1fr auto;
+  gap: 1em;
   padding-bottom: 1em;
 }
 
 .main__profile {
   justify-self: center;
-  margin: 0 1em;
+  width: calc(100% - 4em);
 }
 
 .main__decisionBoard {
-  margin-right: 1em;
+  margin-right: 2em;
 }
