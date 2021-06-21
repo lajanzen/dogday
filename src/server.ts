@@ -4,7 +4,10 @@ dotenv.config();
 import path from "path";
 import express from "express";
 import { connectDB } from "./utils/database";
-// import { connectDB } from "./utils/database";
+
+if (process.env.MONGODB_URL === undefined) {
+  throw new Error("Missing env MONGO_URL");
+}
 
 const { PORT = 3000 } = process.env;
 
@@ -21,16 +24,9 @@ app.get("*", (_req, res) => {
   res.sendFile(path.join(__dirname, "app/index.html"));
 });
 
-app.listen(PORT, () => {
-  console.log(`Boilerplate listening at http://localhost:${PORT}`);
+connectDB(process.env.MONGODB_URL).then(() => {
+  console.log("DB connected");
+  app.listen(PORT, () => {
+    console.log(`DogDay listening at http://localhost:${PORT}`);
+  });
 });
-
-const start = async () => {
-  if (process.env.MONGODB_URL === undefined) {
-    throw new Error("Missing env MONGODB_URL");
-  }
-
-  await connectDB(process.env.MONGODB_URL);
-};
-
-start();
