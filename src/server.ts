@@ -3,6 +3,8 @@ dotenv.config();
 
 import path from "path";
 import express from "express";
+import { connectDB } from "./utils/database";
+// import { connectDB } from "./utils/database";
 
 const { PORT = 3000 } = process.env;
 
@@ -22,3 +24,13 @@ app.get("*", (_req, res) => {
 app.listen(PORT, () => {
   console.log(`Boilerplate listening at http://localhost:${PORT}`);
 });
+
+const start = async () => {
+  if (process.env.MONGODB_URL === undefined) {
+    throw new Error("Missing env MONGODB_URL");
+  }
+
+  await connectDB(process.env.MONGODB_URL);
+};
+
+start();
