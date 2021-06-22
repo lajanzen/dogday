@@ -3,7 +3,7 @@ import { UserSitter } from "../types";
 
 let client: MongoClient;
 export const connectDB = async (url: string): Promise<void> => {
-  const client = new MongoClient(url, {
+  client = new MongoClient(url, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });
