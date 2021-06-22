@@ -3,9 +3,9 @@ export type UserSitter = {
   email: string;
   phone: number;
   city: string;
-  experience: string;
+  experience?: string;
   password: string;
-  photo: string;
+  photo?: string;
 };
 
 export type UserDog = {
@@ -15,5 +15,5 @@ export type UserDog = {
   phone: string;
   city: string;
   password: string;
-  photo: string;
+  photo?: string;
 };
