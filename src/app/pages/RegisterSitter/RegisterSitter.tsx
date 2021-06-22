@@ -15,12 +15,13 @@ function RegisterSitter(): JSX.Element {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState(0);
   const [city, setCity] = useState("");
+  const [experience, setExperience] = useState("");
   const [password, setPassword] = useState("");
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    const user: UserSitter = { name, email, phone, city, password };
+    const user: UserSitter = { name, email, phone, city, experience, password };
     postUser(user);
     history.push("/");
   }
@@ -67,10 +68,10 @@ function RegisterSitter(): JSX.Element {
               onChange={setCity}
               required
             />
-            <DropdownMenu />
+            <DropdownMenu value={experience} onChange={setExperience} />
             <LabeledInput
               label="Passwort"
-              type="password"
+              type="text"
               id="password"
               value={password}
               onChange={setPassword}
