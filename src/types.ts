@@ -12,7 +12,7 @@ export type UserDog = {
   name: string;
   birth: number;
   email: string;
-  phone: string;
+  phone: number;
   city: string;
   password: string;
   photo?: string;
