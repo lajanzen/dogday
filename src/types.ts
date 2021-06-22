@@ -1,7 +1,7 @@
 export type UserSitter = {
   name: string;
   email: string;
-  phone: string;
+  phone: number;
   city: string;
   experience: string;
   password: string;
