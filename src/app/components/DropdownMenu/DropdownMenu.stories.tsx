@@ -6,4 +6,6 @@ export default {
   component: DropdownMenu,
 };
 
-export const experience = (): JSX.Element => <DropdownMenu />;
+export const experience = (): JSX.Element => (
+  <DropdownMenu value="" onChange={console.log} />
+);
