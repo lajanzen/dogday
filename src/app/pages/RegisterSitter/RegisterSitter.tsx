@@ -13,7 +13,7 @@ function RegisterSitter(): JSX.Element {
   const history = useHistory();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState(0);
+  const [phone, setPhone] = useState("");
   const [city, setCity] = useState("");
   const [experience, setExperience] = useState("");
   const [password, setPassword] = useState("");
@@ -57,7 +57,7 @@ function RegisterSitter(): JSX.Element {
               type="number"
               id="phone"
               value={phone}
-              onChange={(value) => setPhone(+value)}
+              onChange={setPhone}
               required
             />
             <LabeledInput

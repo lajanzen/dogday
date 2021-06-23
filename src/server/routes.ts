@@ -14,8 +14,14 @@ router.get("/users/:email", async (request, response) => {
 });
 
 router.post("/users", async (request, response) => {
+  console.log(request.body);
   await saveUser(request.body);
   response.json("New User added");
 });
+
+// router.post("/users/login", async (request, response) => {
+//   const { email, password } = request.body;
+//   const user = await readUser();
+// });
 
 export default router;
