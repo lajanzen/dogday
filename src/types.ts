@@ -1,23 +1,20 @@
 import { ObjectId } from "bson";
 
-export type UserSitter = {
+export type User = {
   _id?: ObjectId;
   name: string;
   email: string;
   phone: string;
   city: string;
-  experience?: string;
   password: string;
   photo?: string;
+  type: "dog" | "sitter";
 };
 
-export type UserDog = {
-  _id?: ObjectId;
-  name: string;
+export type UserSitter = User & {
+  experience: string;
+};
+
+export type UserDog = User & {
   birth: number;
-  email: string;
-  phone: string;
-  city: string;
-  password: string;
-  photo?: string;
 };
