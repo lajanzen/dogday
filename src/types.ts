@@ -4,7 +4,7 @@ export type UserSitter = {
   _id?: ObjectId;
   name: string;
   email: string;
-  phone: number;
+  phone: string;
   city: string;
   experience?: string;
   password: string;
@@ -16,7 +16,7 @@ export type UserDog = {
   name: string;
   birth: number;
   email: string;
-  phone: number;
+  phone: string;
   city: string;
   password: string;
   photo?: string;

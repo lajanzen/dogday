@@ -6,15 +6,15 @@ export const readUsers = async (): Promise<UserSitter[]> => {
 };
 
 export const readUser = async (
-  email: string
-): Promise<UserSitter | undefined> => {
-  const user = await getUsersCollection().findOne({ email });
+  user: Partial<UserSitter>
+): Promise<UserSitter | null> => {
+  const result = await getUsersCollection().findOne(user);
   if (!user) {
     throw new Error("There is no user with that email adress");
   }
-  return user;
+  return result;
 };
 
 export const saveUser = async (newUser: UserSitter): Promise<void> => {
-  await getUsersCollection().insertOne({ ...newUser });
+  await getUsersCollection().insertOne(newUser);
 };

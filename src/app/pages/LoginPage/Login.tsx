@@ -1,16 +1,23 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
+import { UserSitter } from "../../../types";
+import { verifyLogin } from "../../api/api";
 import BackButton from "../../components/BackButton/BackButton";
 import Button from "../../components/Button/Button";
 import LabeledInput from "../../components/LabeledInput/LabeledInput";
 import styles from "./Login.module.css";
 
 function Login(): JSX.Element {
+  const history = useHistory();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    alert("You're logged in");
+
+    const user: Partial<UserSitter> = { email, password };
+    await verifyLogin(user);
+    history.push("/searchdog");
   }
 
   return (

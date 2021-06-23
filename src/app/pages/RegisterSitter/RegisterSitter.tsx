@@ -6,14 +6,14 @@ import DogIcon from "../../components/Icons/DogIcon";
 import LabeledInput from "../../components/LabeledInput/LabeledInput";
 import styles from "./RegisterSitter.module.css";
 import { UserSitter } from "../../../types";
-import { postUser } from "../../api/users";
+import { postUser } from "../../api/api";
 import { useHistory } from "react-router-dom";
 
 function RegisterSitter(): JSX.Element {
   const history = useHistory();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState(0);
+  const [phone, setPhone] = useState("");
   const [city, setCity] = useState("");
   const [experience, setExperience] = useState("");
   const [password, setPassword] = useState("");
@@ -57,7 +57,7 @@ function RegisterSitter(): JSX.Element {
               type="number"
               id="phone"
               value={phone}
-              onChange={(value) => setPhone(+value)}
+              onChange={setPhone}
               required
             />
             <LabeledInput
