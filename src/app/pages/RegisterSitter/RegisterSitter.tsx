@@ -21,7 +21,15 @@ function RegisterSitter(): JSX.Element {
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    const user: UserSitter = { name, email, phone, city, experience, password };
+    const user: UserSitter = {
+      name,
+      email,
+      phone,
+      city,
+      experience,
+      password,
+      type: "sitter",
+    };
     postUser(user);
     history.push("/");
   }

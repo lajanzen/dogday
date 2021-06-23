@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
-import { UserSitter } from "../../../types";
+import { User } from "../../../types";
 import { verifyLogin } from "../../api/api";
 import BackButton from "../../components/BackButton/BackButton";
 import Button from "../../components/Button/Button";
@@ -15,7 +15,7 @@ function Login(): JSX.Element {
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    const user: Partial<UserSitter> = { email, password };
+    const user: Partial<User> = { email, password };
     await verifyLogin(user);
     history.push("/searchdog");
   }
