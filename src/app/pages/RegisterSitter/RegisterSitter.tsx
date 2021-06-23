@@ -6,7 +6,7 @@ import DogIcon from "../../components/Icons/DogIcon";
 import LabeledInput from "../../components/LabeledInput/LabeledInput";
 import styles from "./RegisterSitter.module.css";
 import { UserSitter } from "../../../types";
-import { postUser } from "../../api/users";
+import { postUser } from "../../api/api";
 import { useHistory } from "react-router-dom";
 
 function RegisterSitter(): JSX.Element {
