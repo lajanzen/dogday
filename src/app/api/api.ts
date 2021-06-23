@@ -1,6 +1,8 @@
-import { UserSitter } from "../../types";
+import { UserDog, UserSitter } from "../../types";
 
-export async function postUser(user: UserSitter): Promise<UserSitter> {
+export async function postUser(
+  user: UserSitter | UserDog
+): Promise<UserSitter> {
   const response = await fetch("/api/users", {
     method: "POST",
     headers: {
@@ -17,8 +19,8 @@ export async function postUser(user: UserSitter): Promise<UserSitter> {
 }
 
 export async function verifyLogin(
-  user: Partial<UserSitter>
-): Promise<UserSitter> {
+  user: Partial<UserSitter | UserDog>
+): Promise<UserSitter | UserDog> {
   const response = await fetch("/api/users/login", {
     method: "POST",
     headers: {
@@ -30,6 +32,6 @@ export async function verifyLogin(
     const errorMessage = await response.text();
     throw errorMessage;
   }
-  const result: UserSitter = await response.json();
+  const result: UserSitter | UserDog = await response.json();
   return result;
 }
