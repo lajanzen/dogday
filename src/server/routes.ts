@@ -9,7 +9,7 @@ router.get("/users", async (_request, response) => {
 });
 
 router.get("/users/:email", async (request, response) => {
-  const user = await readUser(request.params.email);
+  const user = await readUser({ email: request.params.email });
   response.json(user);
 });
 
@@ -19,9 +19,19 @@ router.post("/users", async (request, response) => {
   response.json("New User added");
 });
 
-// router.post("/users/login", async (request, response) => {
-//   const { email, password } = request.body;
-//   const user = await readUser();
-// });
+router.post("/users/login", async (request, response, next) => {
+  try {
+    const { email, password } = request.body;
+    const user = await readUser({ email, password });
+    if (!user) {
+      response.status(404).send("User or password is incorrect");
+      alert("User or password is incorrect");
+      return;
+    }
+    response.status(200).json(user);
+  } catch (error) {
+    next(error);
+  }
+});
 
 export default router;
