@@ -3,8 +3,8 @@ dotenv.config();
 
 import path from "path";
 import express from "express";
-import { connectDB } from "./utils/database";
-import { readUser, readUsers, saveUser } from "./utils/users";
+import { connectDB } from "./server/database";
+import router from "./server/routes";
 
 if (process.env.MONGODB_URL === undefined) {
   throw new Error("Missing env MONGO_URL");
@@ -15,20 +15,7 @@ const app = express();
 
 app.use(express.json());
 
-app.get("/api/users", async (_request, response) => {
-  const users = await readUsers();
-  response.json(users);
-});
-
-app.get("/api/users/:email", async (request, response) => {
-  const user = await readUser(request.params.email);
-  response.json(user);
-});
-
-app.post("/api/users", async (request, response) => {
-  await saveUser(request.body);
-  response.json("New User added");
-});
+app.use("/api", router);
 
 // Serve storybook production bundle
 app.use("/storybook", express.static("dist/storybook"));
