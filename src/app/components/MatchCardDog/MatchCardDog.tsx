@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./MatchCard.module.css";
+import styles from "./MatchCardDog.module.css";
 
 export type MatchCardProps = {
   imgSrc: string;
@@ -9,7 +9,7 @@ export type MatchCardProps = {
   phone: string;
 };
 
-function MatchCard({
+function MatchCardDog({
   imgSrc,
   name,
   age,
@@ -29,4 +29,4 @@ function MatchCard({
   );
 }
 
-export default MatchCard;
+export default MatchCardDog;

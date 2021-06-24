@@ -1,13 +1,13 @@
 import React from "react";
-import MatchCard from "./MatchCardDog";
+import MatchCardDog from "./MatchCardDog";
 
 export default {
-  title: "Component/MatchCard",
-  component: MatchCard,
+  title: "Component/MatchCardDog",
+  component: MatchCardDog,
 };
 
 export const Dog = (): JSX.Element => (
-  <MatchCard
+  <MatchCardDog
     imgSrc="/dog.png"
     name="Karl"
     age="12 Monate alt"
@@ -17,7 +17,7 @@ export const Dog = (): JSX.Element => (
 );
 
 export const Dog2 = (): JSX.Element => (
-  <MatchCard
+  <MatchCardDog
     imgSrc="/dog.png"
     name="Karl"
     age="12 Monate alt"
