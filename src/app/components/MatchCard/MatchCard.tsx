@@ -1,18 +1,18 @@
 import React from "react";
-import styles from "./MatchCardDog.module.css";
+import styles from "./MatchCard.module.css";
 
 export type MatchCardProps = {
   imgSrc: string;
   name: string;
-  age: string;
+  info: string;
   mail: string;
   phone: string;
 };
 
-function MatchCardDog({
+function MatchCard({
   imgSrc,
   name,
-  age,
+  info,
   mail,
   phone,
 }: MatchCardProps): JSX.Element {
@@ -21,7 +21,7 @@ function MatchCardDog({
       <img className={styles.image} src={imgSrc} alt="Profile Image" />
       <article className={styles.info}>
         <span className={styles.info__name}>{name}</span>
-        <span className={styles.info__age}>{age}</span>
+        <span className={styles.info__age}>{info}</span>
         <span className={styles.info__mail}>{mail}</span>
         <span className={styles.info__phone}>{phone}</span>
       </article>
@@ -29,4 +29,4 @@ function MatchCardDog({
   );
 }
 
-export default MatchCardDog;
+export default MatchCard;
