@@ -17,7 +17,7 @@
 }
 
 .main__profile {
-  justify-self: center;
+  margin: 0 auto;
   width: calc(100% - 4em);
 }
 
