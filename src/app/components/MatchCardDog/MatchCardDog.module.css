@@ -24,6 +24,6 @@
 }
 
 .info__name {
-  font-size: 1rem;
+  font-size: large;
   color: var(--secondary-color);
 }
