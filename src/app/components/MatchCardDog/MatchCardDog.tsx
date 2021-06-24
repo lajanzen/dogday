@@ -19,12 +19,12 @@ function MatchCardDog({
   return (
     <div className={styles.container}>
       <img className={styles.image} src={imgSrc} alt="Profile Image" />
-      <div className={styles.info}>
+      <article className={styles.info}>
         <span className={styles.info__name}>{name}</span>
         <span className={styles.info__age}>{age}</span>
         <span className={styles.info__mail}>{mail}</span>
         <span className={styles.info__phone}>{phone}</span>
-      </div>
+      </article>
     </div>
   );
 }
