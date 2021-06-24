@@ -1,7 +1,7 @@
 import React from "react";
 import DecisionBoard from "../../components/DecisionBoard/DecisionBoard";
 import NavBar from "../../components/NavBar/NavBar";
-import ProfileCard from "../../components/ProfileCard/ProfileCard";
+import SearchProfileCard from "../../components/SearchProfileCard/SearchProfileCard";
 import styles from "./SearchSitter.module.css";
 
 function SearchSitter(): JSX.Element {
@@ -11,7 +11,7 @@ function SearchSitter(): JSX.Element {
         <NavBar />
       </header>
       <main className={styles.main}>
-        <ProfileCard
+        <SearchProfileCard
           className={styles.main__profile}
           imgSrc="/sitter.png"
           name="Jana"
