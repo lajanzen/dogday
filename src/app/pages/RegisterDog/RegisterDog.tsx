@@ -14,7 +14,7 @@ function RegisterDog(): JSX.Element {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [city, setCity] = useState("");
-  const [birth, setBirth] = useState(0);
+  const [birthYear, setBirthYear] = useState(0);
   const [password, setPassword] = useState("");
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
@@ -25,7 +25,7 @@ function RegisterDog(): JSX.Element {
       email,
       phone,
       city,
-      birth,
+      birthYear,
       password,
       type: "dog",
     };
@@ -51,9 +51,9 @@ function RegisterDog(): JSX.Element {
             />
             <LabeledInput
               label="Geburtsjahr des Hundes"
-              id="birth"
-              value={birth}
-              onChange={(value) => setBirth(+value)}
+              id="birthYear"
+              value={birthYear}
+              onChange={(value) => setBirthYear(+value)}
             />
             <LabeledInput
               label="Deine E-Mail"
