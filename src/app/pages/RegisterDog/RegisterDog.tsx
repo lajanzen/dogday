@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
+import { UserDog } from "../../../types";
+import { postUser } from "../../api/api";
 import BackButton from "../../components/BackButton/BackButton";
 import Button from "../../components/Button/Button";
 import DogIcon from "../../components/Icons/DogIcon";
@@ -6,6 +9,29 @@ import LabeledInput from "../../components/LabeledInput/LabeledInput";
 import styles from "./RegisterDog.module.css";
 
 function RegisterDog(): JSX.Element {
+  const history = useHistory();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [city, setCity] = useState("");
+  const [birthYear, setBirthYear] = useState(0);
+  const [password, setPassword] = useState("");
+
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    const user: UserDog = {
+      name,
+      email,
+      phone,
+      city,
+      birthYear,
+      password,
+      type: "dog",
+    };
+    postUser(user);
+    history.push("/");
+  }
   return (
     <div>
       <div className={styles.container}>
@@ -15,42 +41,47 @@ function RegisterDog(): JSX.Element {
         </header>
 
         <main className={styles.main}>
-          <form className={styles.main__form}>
+          <form className={styles.main__form} onSubmit={handleSubmit}>
             <LabeledInput
               label="Hunde-Name"
               id="name"
-              value=""
-              onChange={console.log}
+              value={name}
+              onChange={setName}
+              required
             />
             <LabeledInput
               label="Geburtsjahr des Hundes"
-              id="birth"
-              value=""
-              onChange={console.log}
+              id="birthYear"
+              value={birthYear}
+              onChange={(value) => setBirthYear(+value)}
             />
             <LabeledInput
               label="Deine E-Mail"
-              id="mail"
-              value=""
-              onChange={console.log}
+              id="email"
+              value={email}
+              onChange={setEmail}
+              required
             />
             <LabeledInput
               label="Deine Handynummer"
               id="phone"
-              value=""
-              onChange={console.log}
+              value={phone}
+              onChange={setPhone}
+              required
             />
             <LabeledInput
               label="Deine Stadt"
               id="city"
-              value=""
-              onChange={console.log}
+              value={city}
+              onChange={setCity}
+              required
             />
             <LabeledInput
               label="Passwort"
               id="password"
-              value=""
-              onChange={console.log}
+              value={password}
+              onChange={setPassword}
+              required
             />
             <Button variant="primary">Hund registrieren</Button>
           </form>
