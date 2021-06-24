@@ -7,7 +7,7 @@
   border-radius: 1em;
 }
 
-.matchImage {
+.image {
   width: 7em;
   height: 7em;
   border-radius: 50%;
@@ -15,7 +15,7 @@
   place-self: center;
 }
 
-.matchInfo {
+.info {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -23,7 +23,7 @@
   font-size: 0.8em;
 }
 
-.matchName {
+.info__name {
   font-size: 1rem;
   color: var(--secondary-color);
 }
