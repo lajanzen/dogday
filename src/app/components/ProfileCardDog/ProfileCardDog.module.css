@@ -23,12 +23,12 @@
   height: 9.4em;
   border-radius: 50%;
   object-fit: cover;
-  border: 1em solid var(--primary-color);
+  border: 1em solid var(--secondary-color);
 }
 
 .user__name {
-  font-size: 1rem;
-  color: var(--primary-color);
+  font-size: 1.5rem;
+  color: var(--secondary-color);
 }
 
 .info,

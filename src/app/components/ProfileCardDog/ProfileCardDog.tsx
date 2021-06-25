@@ -4,7 +4,7 @@ import styles from "./ProfileCardDog.module.css";
 export type ProfileCardDogProps = {
   imgSrc: string;
   name: string;
-  age: string;
+  age: number;
   mail: string;
   phone: string;
   city: string;
