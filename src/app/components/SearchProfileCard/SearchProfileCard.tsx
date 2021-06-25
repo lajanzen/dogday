@@ -1,19 +1,19 @@
 import React from "react";
-import styles from "./ProfileCard.module.css";
+import styles from "./SearchProfileCard.module.css";
 
-export type ProfileCardProps = {
+export type SearchProfileCardProps = {
   imgSrc: string;
   name: string;
   info: string;
   className?: string;
 };
 
-function ProfileCard({
+function SearchProfileCard({
   className,
   imgSrc,
   name,
   info,
-}: ProfileCardProps): JSX.Element {
+}: SearchProfileCardProps): JSX.Element {
   return (
     <div className={`${styles.container} ${className}`}>
       <div className={styles.profileImageWrapper}>
@@ -25,4 +25,4 @@ function ProfileCard({
   );
 }
 
-export default ProfileCard;
+export default SearchProfileCard;
