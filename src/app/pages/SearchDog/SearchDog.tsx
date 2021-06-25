@@ -15,8 +15,6 @@ function SearchDog(): JSX.Element {
       .then((users) => setUsers(users));
   }, []);
 
-  console.log(users);
-
   const swiped = (dir: string, nameToDelete: string) => {
     console.log("removing: " + nameToDelete + dir);
   };
