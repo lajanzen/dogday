@@ -28,6 +28,10 @@ router.post("/users/login", async (request, response, next) => {
       alert("User or password is incorrect");
       return;
     }
+    response.setHeader(
+      "Set-Cookie",
+      `userId=${user._id};path=/;Max-Age=${365 * 24 * 60 * 60}`
+    );
     response.status(200).json(user);
   } catch (error) {
     next(error);
