@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+}
+
 :root {
   /* FONTS */
   --font-family: "Roboto", sans-serif;
