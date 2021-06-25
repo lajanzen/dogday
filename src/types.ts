@@ -7,7 +7,7 @@ export type User = {
   phone: string;
   city: string;
   password: string;
-  photo?: string;
+  photo: string;
   type: "dog" | "sitter";
 };
 
