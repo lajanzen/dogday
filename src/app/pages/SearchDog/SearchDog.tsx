@@ -4,10 +4,10 @@ import NavBar from "../../components/NavBar/NavBar";
 import ProfileCard from "../../components/ProfileCard/ProfileCard";
 import styles from "./SearchDog.module.css";
 import TinderCard from "react-tinder-card";
-import { User } from "../../../types";
+import { UserDog, UserSitter } from "../../../types";
 
 function SearchDog(): JSX.Element {
-  const [users, setUsers] = useState<User[]>([]);
+  const [users, setUsers] = useState<UserSitter[] | UserDog[]>([]);
 
   useEffect(() => {
     fetch("/api/users")
@@ -17,11 +17,11 @@ function SearchDog(): JSX.Element {
 
   console.log(users);
 
-  const swiped = (nameToDelete) => {
-    console.log("removing: " + nameToDelete);
+  const swiped = (dir: string, nameToDelete: string) => {
+    console.log("removing: " + nameToDelete + dir);
   };
 
-  const outOfFrame = (name) => {
+  const outOfFrame = (name: string) => {
     console.log(name + " left the screen!");
   };
 
@@ -37,7 +37,6 @@ function SearchDog(): JSX.Element {
       <main className={styles.main}>
         {users.map((user) => (
           <TinderCard
-            className={styles.swipe}
             key={user.name}
             onSwipe={(dir) => swiped(dir, user.name)}
             onCardLeftScreen={() => outOfFrame(user.name)}
@@ -47,15 +46,12 @@ function SearchDog(): JSX.Element {
               className={styles.main__profile}
               imgSrc={user.photo}
               name={user.name}
-              info={user.city}
+              info={user.type === "sitter" ? user.experience : user.age}
             />
           </TinderCard>
         ))}
-        <DecisionBoard
-          className={styles.main__decisionBoard}
-          onClickNo={(dir) => swiped(dir, user.name)}
-        />
       </main>
+      <DecisionBoard className={styles.main__decisionBoard} />
     </div>
   );
 }
