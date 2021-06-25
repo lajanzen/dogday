@@ -21,9 +21,9 @@ function MatchCard({
       <img className={styles.image} src={imgSrc} alt="Profile Image" />
       <div className={styles.info}>
         <span className={styles.info__name}>{name}</span>
-        <span>{info}</span>
-        <span>{mail}</span>
-        <span>{phone}</span>
+        <span>{info} Jahre alt</span>
+        <span>E-Mail: {mail}</span>
+        <span>Telefon: {phone}</span>
       </div>
     </article>
   );
