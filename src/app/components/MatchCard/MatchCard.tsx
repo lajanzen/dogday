@@ -17,15 +17,15 @@ function MatchCard({
   phone,
 }: MatchCardProps): JSX.Element {
   return (
-    <div className={styles.container}>
+    <article className={styles.container}>
       <img className={styles.image} src={imgSrc} alt="Profile Image" />
-      <article className={styles.info}>
+      <div className={styles.info}>
         <span className={styles.info__name}>{name}</span>
-        <span className={styles.info__age}>{info}</span>
-        <span className={styles.info__mail}>{mail}</span>
-        <span className={styles.info__phone}>{phone}</span>
-      </article>
-    </div>
+        <span>{info}</span>
+        <span>{mail}</span>
+        <span>{phone}</span>
+      </div>
+    </article>
   );
 }
 
