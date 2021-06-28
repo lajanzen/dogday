@@ -3,7 +3,7 @@ import styles from "./ProfileCard.module.css";
 
 export type ProfileCardDogProps = {
   info: string;
-  imgSrc: string;
+  imgSrc?: string;
   name: string;
   mail: string;
   phone: string;
