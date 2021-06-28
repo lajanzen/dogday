@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./ProfileCardDog.module.css";
+import styles from "./ProfileCard.module.css";
 
 export type ProfileCardDogProps = {
   info: string;
