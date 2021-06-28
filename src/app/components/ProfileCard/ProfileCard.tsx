@@ -2,18 +2,20 @@ import React from "react";
 import styles from "./ProfileCardDog.module.css";
 
 export type ProfileCardDogProps = {
+  info: string;
   imgSrc: string;
   name: string;
-  age: number;
   mail: string;
   phone: string;
   city: string;
+  info2: number | string;
 };
 
 function ProfileCardDog({
+  info,
+  info2,
   imgSrc,
   name,
-  age,
   mail,
   phone,
   city,
@@ -28,13 +30,13 @@ function ProfileCardDog({
         <span>E-Mail:</span>
         <span>Handynummer:</span>
         <span>Stadt:</span>
-        <span>Alter:</span>
+        <span>{info}</span>
       </div>
       <div className={styles.info}>
         <span>{mail}</span>
         <span>{phone}</span>
         <span>{city}</span>
-        <span>{age}</span>
+        <span>{info2}</span>
       </div>
     </div>
   );

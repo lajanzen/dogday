@@ -1,5 +1,5 @@
 import React from "react";
-import ProfileCardDog from "./ProfileCardDog";
+import ProfileCardDog from "./ProfileCard";
 
 export default {
   title: "Component/ProfileCardDog",
@@ -10,7 +10,8 @@ export const Dog = (): JSX.Element => (
   <ProfileCardDog
     imgSrc="/dog.png"
     name="Karl"
-    age="12 Monate alt"
+    info="Alter: "
+    info2="3 Monate"
     mail="karl@web.de"
     phone="0162123456"
     city="Köln"
