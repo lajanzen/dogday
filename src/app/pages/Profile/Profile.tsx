@@ -1,23 +1,27 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Profile.module.css";
 import NavBar from "../../components/NavBar/NavBar";
-import ProfileCardDog from "../../components/ProfileCardDog/ProfileCardDog";
-// import { UserDog, UserSitter } from "../../../types";
+import ProfileCard from "../../components/ProfileCard/ProfileCard";
+import { UserDog, UserSitter } from "../../../types";
 import DogIcon from "../../components/Icons/DogIcon";
 
 function Profile(): JSX.Element {
-  // const [users, setUsers] = useState<UserSitter[] | UserDog[]>([]);
+  const [user, setUser] = useState<UserSitter | UserDog | null>(null);
 
   useEffect(() => {
-    fetch("/api/users")
+    fetch("/api/users/me")
       .then((response) => response.json())
-      .then((users) => setUsers(users));
+      .then((user) => setUser(user));
   }, []);
 
-  // function age(birthYear: number): number {
-  //   const currentYear = new Date().getFullYear();
-  //   return currentYear - birthYear;
-  // }
+  function calculateAge(birthYear: number): number {
+    const currentYear = new Date().getFullYear();
+    return currentYear - birthYear;
+  }
+
+  if (!user) {
+    return <p>No user found</p>;
+  }
 
   return (
     <div className={styles.container}>
@@ -25,22 +29,17 @@ function Profile(): JSX.Element {
         <NavBar />
       </header>
       <main className={styles.main}>
-        {/* {users.map((user) => ( */}
-        <ProfileCardDog
-          imgSrc="/dog.png"
-          name="Karl"
-          mail="karl@mail.de"
-          phone="0165283553"
-          city="Köln"
-          age={2}
-          // imgSrc={user.photo}
-          // name={user.name}
-          // mail={user.email}
-          // phone={user.phone}
-          // city={user.city}
-          // age={age(user.birthYear)}
+        <ProfileCard
+          imgSrc={user.photo}
+          name={user.name}
+          mail={user.email}
+          phone={user.phone}
+          city={user.city}
+          info={user.type === "dog" ? "Alter: " : "Erfahrung: "}
+          info2={
+            user.type === "dog" ? calculateAge(user.birthYear) : user.experience
+          }
         />
-        {/* ))} */}
       </main>
       <footer className={styles.footer}>
         <DogIcon />
