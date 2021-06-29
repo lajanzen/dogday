@@ -4,10 +4,10 @@ import NavBar from "../../components/NavBar/NavBar";
 import SearchProfileCard from "../../components/SearchProfileCard/SearchProfileCard";
 import styles from "./SearchMatch.module.css";
 import TinderCard from "react-tinder-card";
-import { UserDog, UserSitter } from "../../../types";
+import { UserType } from "../../../types";
 
 function SearchMatch(): JSX.Element {
-  const [users, setUsers] = useState<UserSitter[] | UserDog[]>([]);
+  const [users, setUsers] = useState<UserType[]>([]);
 
   useEffect(() => {
     fetch("/api/users")
