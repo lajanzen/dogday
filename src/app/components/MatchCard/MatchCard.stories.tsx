@@ -8,6 +8,7 @@ export default {
 
 export const DogKarl = (): JSX.Element => (
   <MatchCard
+    type="dog"
     imgSrc="/dog.png"
     name="Karl"
     info="12 Monate alt"
@@ -18,6 +19,7 @@ export const DogKarl = (): JSX.Element => (
 
 export const DogKarla = (): JSX.Element => (
   <MatchCard
+    type="dog"
     imgSrc="/dog.png"
     name="Karla"
     info="12 Monate alt"
@@ -28,6 +30,7 @@ export const DogKarla = (): JSX.Element => (
 
 export const SitterJana = (): JSX.Element => (
   <MatchCard
+    type="dog"
     imgSrc="/sitter.png"
     name="Jana"
     info="Hunde-Profi"
