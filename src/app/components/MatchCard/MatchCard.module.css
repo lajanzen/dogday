@@ -1,0 +1,29 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  background-color: var(--secondary-background-color);
+  padding: 1em;
+  border-radius: 1em;
+}
+
+.image {
+  width: 7em;
+  height: 7em;
+  border-radius: 50%;
+  object-fit: cover;
+  place-self: center;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-family: var(--font-family);
+  font-size: 0.8em;
+}
+
+.info__name {
+  font-size: large;
+  color: var(--secondary-color);
+}

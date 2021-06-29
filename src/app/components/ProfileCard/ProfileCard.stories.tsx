@@ -1,15 +1,19 @@
 import React from "react";
-import ProfileCard from "./ProfileCard";
+import ProfileCardDog from "./ProfileCard";
 
 export default {
-  title: "Component/ProfileCard",
-  component: ProfileCard,
+  title: "Component/ProfileCardDog",
+  component: ProfileCardDog,
 };
 
 export const Dog = (): JSX.Element => (
-  <ProfileCard imgSrc="/dog.png" name="Karl" info="Alter: 12 Wochen" />
-);
-
-export const Sitter = (): JSX.Element => (
-  <ProfileCard imgSrc="/sitter.png" name="Jana" info="Hundeprofi" />
+  <ProfileCardDog
+    type="dog"
+    imgSrc="/dog.png"
+    name="Karl"
+    age={2}
+    mail="karl@web.de"
+    phone="0162123456"
+    city="Köln"
+  />
 );

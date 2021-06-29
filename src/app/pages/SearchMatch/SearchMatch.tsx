@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import DecisionBoard from "../../components/DecisionBoard/DecisionBoard";
 import NavBar from "../../components/NavBar/NavBar";
-import ProfileCard from "../../components/ProfileCard/ProfileCard";
-import styles from "./SearchDog.module.css";
+import SearchProfileCard from "../../components/SearchProfileCard/SearchProfileCard";
+import styles from "./SearchMatch.module.css";
 import TinderCard from "react-tinder-card";
 import { UserDog, UserSitter } from "../../../types";
 
-function SearchDog(): JSX.Element {
+function SearchMatch(): JSX.Element {
   const [users, setUsers] = useState<UserSitter[] | UserDog[]>([]);
 
   useEffect(() => {
@@ -15,12 +15,19 @@ function SearchDog(): JSX.Element {
       .then((users) => setUsers(users));
   }, []);
 
+  console.log(users);
+
   const swiped = (dir: string, nameToDelete: string) => {
     console.log("removing: " + nameToDelete + dir);
   };
 
   const outOfFrame = (name: string) => {
     console.log(name + " left the screen!");
+  };
+
+  const age = (birthYear: number): number => {
+    const currentYear = new Date().getFullYear();
+    return currentYear - birthYear;
   };
 
   if (!users) {
@@ -40,11 +47,14 @@ function SearchDog(): JSX.Element {
             onCardLeftScreen={() => outOfFrame(user.name)}
             preventSwipe={["up", "down"]}
           >
-            <ProfileCard
+            <SearchProfileCard
+              type={user.type}
               className={styles.main__profile}
               imgSrc={user.photo}
               name={user.name}
-              info={user.type === "sitter" ? user.experience : user.age}
+              info={
+                user.type === "sitter" ? user.experience : age(user.birthYear)
+              }
             />
           </TinderCard>
         ))}
@@ -54,4 +64,4 @@ function SearchDog(): JSX.Element {
   );
 }
 
-export default SearchDog;
+export default SearchMatch;

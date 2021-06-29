@@ -25,6 +25,7 @@
     "@storybook/react": "^6.2.9",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
+    "@types/cookie-parser": "^1.4.2",
     "@types/express": "^4.17.12",
     "@types/jest": "^26.0.23",
     "@types/mongodb": "^3.6.18",
@@ -54,6 +55,7 @@
     "vite": "^2.2.3"
   },
   "dependencies": {
+    "cookie-parser": "^1.4.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "mongodb": "^3.6.9",

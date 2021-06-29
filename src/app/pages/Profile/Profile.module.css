@@ -1,0 +1,22 @@
+.container {
+  display: grid;
+  gap: 2em;
+}
+
+.header {
+  margin-left: 1em;
+}
+
+.main {
+  margin: 0 2em;
+}
+
+.footer {
+  position: fixed;
+  display: grid;
+  justify-items: center;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
