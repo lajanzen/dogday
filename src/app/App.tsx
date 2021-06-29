@@ -4,7 +4,7 @@ import { BrowserRouter, Switch, Route, RouteProps } from "react-router-dom";
 import LandingPage from "./pages/LandingPage/LandingPage";
 import RegisterDog from "./pages/RegisterDog/RegisterDog";
 import Login from "./pages/LoginPage/Login";
-import SearchDog from "./pages/SearchDog/SearchDog";
+import SearchMatch from "./pages/SearchMatch/SearchMatch";
 import RegisterSitter from "./pages/RegisterSitter/RegisterSitter";
 import SearchSitter from "./pages/SearchSitter/SearchSitter";
 import Profile from "./pages/Profile/Profile";
@@ -22,6 +22,7 @@ const routes: CustomRouteProps[] = [
   { path: "/searchdog", Component: SearchDog },
   { path: "/searchsitter", Component: SearchSitter },
   { path: "/profile", Component: Profile },
+  { path: "/searchmatch", Component: SearchMatch },
 ];
 
 function App(): JSX.Element {

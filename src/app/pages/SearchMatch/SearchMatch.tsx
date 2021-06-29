@@ -2,9 +2,9 @@ import React from "react";
 import DecisionBoard from "../../components/DecisionBoard/DecisionBoard";
 import NavBar from "../../components/NavBar/NavBar";
 import SearchProfileCard from "../../components/SearchProfileCard/SearchProfileCard";
-import styles from "./SearchSitter.module.css";
+import styles from "./SearchMatch.module.css";
 
-function SearchSitter(): JSX.Element {
+function SearchMatch(): JSX.Element {
   return (
     <div className={styles.container}>
       <header className={styles.header}>
@@ -13,9 +13,9 @@ function SearchSitter(): JSX.Element {
       <main className={styles.main}>
         <SearchProfileCard
           className={styles.main__profile}
-          imgSrc="/sitter.png"
-          name="Jana"
-          info="Hunde-Profi"
+          imgSrc="/dog.png"
+          name="Karl"
+          info="Alter: 12 Wochen"
         />
         <DecisionBoard className={styles.main__decisionBoard} />
       </main>
@@ -23,4 +23,4 @@ function SearchSitter(): JSX.Element {
   );
 }
 
-export default SearchSitter;
+export default SearchMatch;
