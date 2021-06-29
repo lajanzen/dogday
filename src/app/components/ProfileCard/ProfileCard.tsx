@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./ProfileCard.module.css";
 
 export type ProfileCardProps = {
-  imgSrc: string;
+  imgSrc?: string;
   name: string;
   info: string;
   className?: string;
