@@ -5,6 +5,7 @@ import path from "path";
 import express from "express";
 import { connectDB } from "./server/database";
 import router from "./server/routes";
+import cookieParser from "cookie-parser";
 
 if (process.env.MONGODB_URL === undefined) {
   throw new Error("Missing env MONGO_URL");
@@ -14,6 +15,7 @@ const { PORT = 3000 } = process.env;
 const app = express();
 
 app.use(express.json());
+app.use(cookieParser());
 
 app.use("/api", router);
 
