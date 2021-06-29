@@ -12,7 +12,7 @@ function Matches(): JSX.Element {
   );
 
   useEffect(() => {
-    fetch("/api/matches")
+    fetch("/api/users")
       .then((response) => response.json())
       .then((users) => setUsers(users));
 

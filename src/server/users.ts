@@ -1,11 +1,7 @@
 import { UserType } from "../types";
 import { getUsersCollection } from "./database";
 
-export const readUsers = async (): Promise<UserType[]> => {
-  return await getUsersCollection().find().toArray();
-};
-
-export const readMatches = async (
+export const readUsers = async (
   user: Partial<UserType>
 ): Promise<UserType[]> => {
   return await getUsersCollection().find(user).toArray();
