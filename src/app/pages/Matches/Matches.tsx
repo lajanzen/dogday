@@ -12,7 +12,7 @@ function Matches(): JSX.Element {
   );
 
   useEffect(() => {
-    fetch("/api/users")
+    fetch("/api/matches")
       .then((response) => response.json())
       .then((users) => setUsers(users));
 
@@ -38,11 +38,7 @@ function Matches(): JSX.Element {
       <main className={styles.main}>
         {users.map((user) => (
           <MatchCard
-            type={
-              loggedInUser.type === "dog"
-                ? (user.type = "sitter")
-                : (user.type = "dog")
-            }
+            type={user.type}
             imgSrc={user.photo}
             name={user.name}
             mail={user.email}

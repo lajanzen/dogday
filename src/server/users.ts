@@ -5,6 +5,12 @@ export const readUsers = async (): Promise<UserType[]> => {
   return await getUsersCollection().find().toArray();
 };
 
+export const readMatches = async (
+  user: Partial<UserType>
+): Promise<UserType[]> => {
+  return await getUsersCollection().find(user).toArray();
+};
+
 export const readUser = async (
   user: Partial<UserType>
 ): Promise<UserType | null> => {

@@ -40,3 +40,8 @@ Content-Type: application/json
 
 ### LoggedIn User 
 GET http://localhost:6007/api/users/me HTTP/1.1
+Accept: application/json
+
+### Request matches (opposite UserType)
+GET http://localhost:6007/api/matches HTTP/1.1
+Accept: application/json
