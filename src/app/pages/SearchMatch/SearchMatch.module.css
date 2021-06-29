@@ -17,6 +17,7 @@
 .main__profile {
   margin: 0 auto;
   width: calc(100% - 4em);
+  height: 100%;
 }
 
 .main__decisionBoard {

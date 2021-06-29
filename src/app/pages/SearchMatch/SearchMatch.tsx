@@ -15,8 +15,6 @@ function SearchMatch(): JSX.Element {
       .then((users) => setUsers(users));
   }, []);
 
-  console.log(users);
-
   const swiped = (dir: string, nameToDelete: string) => {
     console.log("removing: " + nameToDelete + dir);
   };
@@ -31,7 +29,7 @@ function SearchMatch(): JSX.Element {
   };
 
   if (!users) {
-    return <div>User not found</div>;
+    return <div>No user found</div>;
   }
 
   return (

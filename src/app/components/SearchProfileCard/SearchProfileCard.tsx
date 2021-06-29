@@ -2,13 +2,15 @@ import React from "react";
 import styles from "./SearchProfileCard.module.css";
 
 export type SearchProfileCardProps = {
-  imgSrc: string;
+  type: string;
+  imgSrc?: string;
   name: string;
-  info: string;
+  info: string | number;
   className?: string;
 };
 
 function SearchProfileCard({
+  type,
   className,
   imgSrc,
   name,
@@ -20,7 +22,9 @@ function SearchProfileCard({
         <img className={styles.profileImage} src={imgSrc} alt="" />
       </div>
       <span className={styles.profileName}>{name}</span>
-      <span className={styles.profileInfo}>{info}</span>
+      <span className={styles.profileInfo}>
+        {type === "dog" ? `${info} Jahre alt` : info}
+      </span>
     </div>
   );
 }
