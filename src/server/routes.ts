@@ -1,5 +1,5 @@
 import express from "express";
-import { readMatches, readUser, readUsers, saveUser } from "./users";
+import { readUser, readUsers, saveUser } from "./users";
 import { ObjectId } from "mongodb";
 
 const router = express.Router();
@@ -21,12 +21,7 @@ router.get("/users/me", async (request, response, next) => {
   }
 });
 
-router.get("/users", async (_request, response) => {
-  const users = await readUsers();
-  response.json(users);
-});
-
-router.get("/matches", async (request, response) => {
+router.get("/users", async (request, response) => {
   const { userId } = request.cookies;
   const user = await readUser({ _id: new ObjectId(userId) });
   if (!user) {
@@ -35,7 +30,7 @@ router.get("/matches", async (request, response) => {
   }
 
   const oppositeUserType = user.type === "dog" ? "sitter" : "dog";
-  const users = await readMatches({ type: oppositeUserType });
+  const users = await readUsers({ type: oppositeUserType });
   response.status(200).json(users);
 });
 
