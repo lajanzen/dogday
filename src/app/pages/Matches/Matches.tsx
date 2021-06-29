@@ -7,16 +7,27 @@ import styles from "./Matches.module.css";
 
 function Matches(): JSX.Element {
   const [users, setUsers] = useState<UserSitter[] | UserDog[]>([]);
+  const [loggedInUser, setloggedInUser] = useState<UserSitter | UserDog | null>(
+    null
+  );
 
   useEffect(() => {
     fetch("/api/users")
       .then((response) => response.json())
       .then((users) => setUsers(users));
+
+    fetch("/api/users/me")
+      .then((response) => response.json())
+      .then((user) => setloggedInUser(user));
   }, []);
 
   function age(birthYear: number): number {
     const currentYear = new Date().getFullYear();
     return currentYear - birthYear;
+  }
+
+  if (!loggedInUser) {
+    return <p>Please log in</p>;
   }
 
   return (
@@ -27,11 +38,18 @@ function Matches(): JSX.Element {
       <main className={styles.main}>
         {users.map((user) => (
           <MatchCard
+            type={
+              loggedInUser.type === "dog"
+                ? (user.type = "sitter")
+                : (user.type = "dog")
+            }
             imgSrc={user.photo}
             name={user.name}
             mail={user.email}
             phone={user.phone}
-            info={`${age(user.birthYear)}`}
+            info={
+              user.type === "dog" ? `${age(user.birthYear)}` : user.experience
+            }
           />
         ))}
         <footer className={styles.footer}>
