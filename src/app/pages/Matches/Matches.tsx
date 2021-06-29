@@ -7,27 +7,16 @@ import styles from "./Matches.module.css";
 
 function Matches(): JSX.Element {
   const [users, setUsers] = useState<UserSitter[] | UserDog[]>([]);
-  const [loggedInUser, setloggedInUser] = useState<UserSitter | UserDog | null>(
-    null
-  );
 
   useEffect(() => {
     fetch("/api/users")
       .then((response) => response.json())
       .then((users) => setUsers(users));
-
-    fetch("/api/users/me")
-      .then((response) => response.json())
-      .then((user) => setloggedInUser(user));
   }, []);
 
   function age(birthYear: number): number {
     const currentYear = new Date().getFullYear();
     return currentYear - birthYear;
-  }
-
-  if (!loggedInUser) {
-    return <p>Please log in</p>;
   }
 
   return (
