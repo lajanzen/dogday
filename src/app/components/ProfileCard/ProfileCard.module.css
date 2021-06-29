@@ -1,15 +1,12 @@
 .container {
   display: grid;
-  grid-template: 1fr auto / auto 1fr;
+  grid-template: 1fr 1fr / 1fr 1fr;
   background-color: var(--secondary-background-color);
   border-radius: 1em;
   font-family: var(--font-family);
   color: var(--button-text-color);
-  align-items: center;
   box-shadow: 0 0.15em 0.35em var(--shadow-color);
-  height: 100%;
-  column-gap: 1em;
-  row-gap: 2em;
+  gap: 1em;
   padding: 1em;
 }
 
