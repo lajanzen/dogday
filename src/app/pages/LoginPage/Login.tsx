@@ -17,7 +17,7 @@ function Login(): JSX.Element {
 
     const user: Partial<User> = { email, password };
     await verifyLogin(user);
-    history.push("/searchdog");
+    history.push("/searchmatch");
   }
 
   return (

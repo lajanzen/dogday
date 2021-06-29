@@ -9,7 +9,7 @@ function NavBar(): JSX.Element {
   return (
     <div className={styles.container}>
       <div className={styles.links}>
-        <LinkComponent link="#" variant="round">
+        <LinkComponent link="/profile" variant="round">
           <ProfileIcon />
         </LinkComponent>
         <LinkComponent link="/matches" variant="round">
