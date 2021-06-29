@@ -8,10 +8,10 @@ export default {
 
 export const Dog = (): JSX.Element => (
   <ProfileCardDog
+    type="dog"
     imgSrc="/dog.png"
     name="Karl"
-    info="Alter: "
-    info2="3 Monate"
+    age={2}
     mail="karl@web.de"
     phone="0162123456"
     city="Köln"

@@ -30,15 +30,15 @@ function Profile(): JSX.Element {
       </header>
       <main className={styles.main}>
         <ProfileCard
+          type={user.type}
           imgSrc={user.photo}
           name={user.name}
           mail={user.email}
           phone={user.phone}
           city={user.city}
-          info={user.type === "dog" ? "Alter: " : "Erfahrung: "}
-          info2={
-            user.type === "dog" ? calculateAge(user.birthYear) : user.experience
-          }
+          {...(user.type === "dog"
+            ? { age: calculateAge(user.birthYear) }
+            : { experience: user.experience })}
         />
       </main>
       <footer className={styles.footer}>
