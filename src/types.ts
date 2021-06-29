@@ -19,3 +19,5 @@ export type UserDog = User & {
   type: "dog";
   birthYear: number;
 };
+
+export type UserType = UserSitter | UserDog;
