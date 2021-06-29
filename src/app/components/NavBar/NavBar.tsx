@@ -9,13 +9,13 @@ function NavBar(): JSX.Element {
   return (
     <div className={styles.container}>
       <div className={styles.links}>
-        <LinkComponent link="#" variant="round">
+        <LinkComponent link="/profile" variant="round">
           <ProfileIcon />
         </LinkComponent>
-        <LinkComponent link="#" variant="round">
+        <LinkComponent link="/matches" variant="round">
           <HeartIcon />
         </LinkComponent>
-        <LinkComponent link="#" variant="round">
+        <LinkComponent link="/searchmatch" variant="round">
           <SearchIcon />
         </LinkComponent>
       </div>
