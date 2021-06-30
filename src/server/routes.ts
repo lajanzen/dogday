@@ -7,7 +7,6 @@ const router = express.Router();
 router.get("/users/me", async (request, response, next) => {
   try {
     const { userId } = request.cookies;
-    console.log(userId);
     if (!userId) {
       return response.status(401).end("Unauthorized! You have to login first.");
     }

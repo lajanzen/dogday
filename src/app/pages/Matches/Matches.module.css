@@ -1,0 +1,31 @@
+.container {
+  display: grid;
+  gap: 2em;
+  height: 100vh;
+  padding-bottom: 6em;
+}
+
+.header {
+  margin-left: 1em;
+}
+
+.main {
+  overflow: scroll;
+  display: grid;
+  gap: 1em;
+  margin: 0 2em;
+}
+
+.main::-webkit-scrollbar {
+  display: none;
+}
+
+.footer {
+  position: fixed;
+  display: grid;
+  justify-items: center;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}

@@ -12,7 +12,7 @@ function NavBar(): JSX.Element {
         <LinkComponent link="/profile" variant="round">
           <ProfileIcon />
         </LinkComponent>
-        <LinkComponent link="#" variant="round">
+        <LinkComponent link="/matches" variant="round">
           <HeartIcon />
         </LinkComponent>
         <LinkComponent link="#" variant="round">
