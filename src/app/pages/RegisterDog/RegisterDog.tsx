@@ -14,7 +14,7 @@ function RegisterDog(): JSX.Element {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [city, setCity] = useState("");
-  const [birthYear, setBirthYear] = useState(0);
+  const [birthYear, setBirthYear] = useState(20);
   const [password, setPassword] = useState("");
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {

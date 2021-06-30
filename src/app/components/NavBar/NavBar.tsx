@@ -15,7 +15,7 @@ function NavBar(): JSX.Element {
         <LinkComponent link="/matches" variant="round">
           <HeartIcon />
         </LinkComponent>
-        <LinkComponent link="#" variant="round">
+        <LinkComponent link="/searchmatch" variant="round">
           <SearchIcon />
         </LinkComponent>
       </div>

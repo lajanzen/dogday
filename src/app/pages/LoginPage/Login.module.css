@@ -1,13 +1,15 @@
 .container {
   display: grid;
-  grid-template-rows: auto auto;
-  row-gap: 3em;
-  margin: 1.5em;
+  grid-template-rows: auto 1fr;
+  row-gap: 2em;
+  padding: 1.5em;
+  height: 100vh;
 }
 
 .header {
-  display: grid;
-  gap: 2.5em;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2em;
 }
 
 .header__logo {
@@ -15,16 +17,12 @@
   place-self: center;
 }
 
-.main {
-  width: 100%;
-}
-
 .form {
   background-color: var(--secondary-background-color);
   display: grid;
-  grid-template-rows: 1fr 1fr 10em;
+  grid-template-rows: auto auto 7em;
   align-items: center;
   row-gap: 1.2em;
   border-radius: 0.5em;
-  padding: 2em 1em 3em;
+  padding: 2em 1em 0;
 }
