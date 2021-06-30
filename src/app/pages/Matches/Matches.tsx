@@ -3,6 +3,7 @@ import { UserDog, UserSitter } from "../../../types";
 import DogIcon from "../../components/Icons/DogIcon";
 import MatchCard from "../../components/MatchCard/MatchCard";
 import NavBar from "../../components/NavBar/NavBar";
+import { age } from "../../utils/helpFunctions";
 import styles from "./Matches.module.css";
 
 function Matches(): JSX.Element {
@@ -13,11 +14,6 @@ function Matches(): JSX.Element {
       .then((response) => response.json())
       .then((users) => setUsers(users));
   }, []);
-
-  function age(birthYear: number): number {
-    const currentYear = new Date().getFullYear();
-    return currentYear - birthYear;
-  }
 
   return (
     <div className={styles.container}>

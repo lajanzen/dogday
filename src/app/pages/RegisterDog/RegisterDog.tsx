@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { UserDog } from "../../../types";
-import { postUser } from "../../api/api";
+import { postUser } from "../../utils/api";
 import BackButton from "../../components/BackButton/BackButton";
 import Button from "../../components/Button/Button";
 import DogIcon from "../../components/Icons/DogIcon";
