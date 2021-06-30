@@ -20,9 +20,15 @@ function DropdownMenu({ value, onChange }: DropdownMenuProps): JSX.Element {
         id="dropdown"
       >
         <option value="">-Auswählen-</option>
-        <option value="newbie">Hunde-Newbie ({"<"} 1 Jahr)</option>
-        <option value="friend">Hunde-Freund (1-3 Jahre)</option>
-        <option value="professional">Hunde-Profi ({">"} 3 Jahre)</option>
+        <option value="Hunde-Newbie (< 1 Jahr)">
+          Hunde-Newbie ({"<"} 1 Jahr)
+        </option>
+        <option value="Hunde-Freund (1-3 Jahre)">
+          Hunde-Freund (1-3 Jahre)
+        </option>
+        <option value="Hunde-Profi (> 3 Jahre)">
+          Hunde-Profi ({">"} 3 Jahre)
+        </option>
       </select>
     </div>
   );
