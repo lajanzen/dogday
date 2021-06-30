@@ -6,7 +6,7 @@ import DogIcon from "../../components/Icons/DogIcon";
 import LabeledInput from "../../components/LabeledInput/LabeledInput";
 import styles from "./RegisterSitter.module.css";
 import { UserSitter } from "../../../types";
-import { postUser } from "../../utils/api";
+import { postUser, uploadProfilePicture } from "../../utils/api";
 import { useHistory } from "react-router-dom";
 
 function RegisterSitter(): JSX.Element {
@@ -17,11 +17,13 @@ function RegisterSitter(): JSX.Element {
   const [city, setCity] = useState("");
   const [experience, setExperience] = useState("");
   const [password, setPassword] = useState("");
+  const [photo, setPhoto] = useState("");
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
     const user: UserSitter = {
+      photo,
       name,
       email,
       phone,
@@ -32,6 +34,18 @@ function RegisterSitter(): JSX.Element {
     };
     postUser(user);
     history.push("/");
+  }
+
+  async function handlePictureUpload(
+    event: React.ChangeEvent<HTMLInputElement>
+  ) {
+    const pictureFile = event.target.files?.item(0);
+    if (!pictureFile) {
+      return;
+    }
+    const picturePath = await uploadProfilePicture(pictureFile);
+    setPhoto(picturePath.secure_url);
+    console.log(picturePath.secure_url);
   }
 
   return (
@@ -85,6 +99,17 @@ function RegisterSitter(): JSX.Element {
               onChange={setPassword}
               required
             />
+            <div className={styles.main__form_labeledInput}>
+              <label className={styles.main__form_label} htmlFor="file">
+                Dein Bild
+              </label>
+              <input
+                className={styles.main__form_input}
+                type="file"
+                onChange={handlePictureUpload}
+                id="file"
+              />
+            </div>
             <Button variant="primary">Registrieren</Button>
           </form>
         </main>
