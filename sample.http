@@ -25,7 +25,7 @@ POST http://localhost:6007/api/users/login HTTP/1.1
 Content-Type: application/json
 
 {
-    "email": "user@mail.com",
+    "email": "bibi@mail.com",
     "password": "ilovedogs123"
 }
 
@@ -37,3 +37,7 @@ Content-Type: application/json
     "email": "bla@mail.com",
     "password": "wrong"
 }
+
+### LoggedIn User 
+GET http://localhost:6007/api/users/me HTTP/1.1
+Accept: application/json

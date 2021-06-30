@@ -1,11 +1,37 @@
 import express from "express";
 import { readUser, readUsers, saveUser } from "./users";
+import { ObjectId } from "mongodb";
 
 const router = express.Router();
 
-router.get("/users", async (_request, response) => {
-  const users = await readUsers();
-  response.json(users);
+router.get("/users/me", async (request, response, next) => {
+  try {
+    const { userId } = request.cookies;
+    if (!userId) {
+      return response.status(401).end("Unauthorized! You have to login first.");
+    }
+    const user = await readUser({ _id: new ObjectId(userId) });
+    if (!user) {
+      response.status(404).send("User not found");
+      return;
+    }
+    response.status(200).json(user);
+  } catch (error) {
+    next(error);
+  }
+});
+
+router.get("/users", async (request, response) => {
+  const { userId } = request.cookies;
+  const user = await readUser({ _id: new ObjectId(userId) });
+  if (!user) {
+    response.status(404).end();
+    return;
+  }
+
+  const oppositeUserType = user.type === "dog" ? "sitter" : "dog";
+  const users = await readUsers({ type: oppositeUserType });
+  response.status(200).json(users);
 });
 
 router.get("/users/:email", async (request, response) => {

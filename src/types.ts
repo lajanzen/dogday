@@ -8,13 +8,16 @@ export type User = {
   city: string;
   password: string;
   photo?: string;
-  type: "dog" | "sitter";
 };
 
 export type UserSitter = User & {
+  type: "sitter";
   experience: string;
 };
 
 export type UserDog = User & {
+  type: "dog";
   birthYear: number;
 };
+
+export type UserType = UserSitter | UserDog;

@@ -4,8 +4,9 @@
   background-color: var(--secondary-background-color);
   border-radius: 1em;
   font-family: var(--font-family);
-  column-gap: 1em;
-  row-gap: 2em;
+  color: var(--button-text-color);
+  box-shadow: 0 0.15em 0.35em var(--shadow-color);
+  gap: 1em;
   padding: 1em;
 }
 
@@ -23,12 +24,12 @@
   height: 9.4em;
   border-radius: 50%;
   object-fit: cover;
-  border: 1em solid var(--primary-color);
+  border: 1em solid var(--secondary-color);
 }
 
 .user__name {
-  font-size: 1rem;
-  color: var(--primary-color);
+  font-size: 1.5rem;
+  color: var(--secondary-color);
 }
 
 .info,

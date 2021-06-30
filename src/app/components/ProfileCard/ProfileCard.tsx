@@ -1,23 +1,27 @@
 import React from "react";
-import styles from "./ProfileCardDog.module.css";
+import styles from "./ProfileCard.module.css";
 
-export type ProfileCardDogProps = {
-  imgSrc: string;
+export type ProfileCardProps = {
+  imgSrc?: string;
   name: string;
-  age: string;
   mail: string;
   phone: string;
   city: string;
+  type: string;
+  experience?: string;
+  age?: number;
 };
 
 function ProfileCardDog({
   imgSrc,
   name,
-  age,
   mail,
   phone,
   city,
-}: ProfileCardDogProps): JSX.Element {
+  type,
+  experience,
+  age,
+}: ProfileCardProps): JSX.Element {
   return (
     <div className={styles.container}>
       <div className={styles.user}>
@@ -28,13 +32,13 @@ function ProfileCardDog({
         <span>E-Mail:</span>
         <span>Handynummer:</span>
         <span>Stadt:</span>
-        <span>Alter:</span>
+        <span>{type === "dog" ? "Alter: " : "Erfahrung: "}</span>
       </div>
       <div className={styles.info}>
         <span>{mail}</span>
         <span>{phone}</span>
         <span>{city}</span>
-        <span>{age}</span>
+        <span>{type === "dog" ? age : experience}</span>
       </div>
     </div>
   );

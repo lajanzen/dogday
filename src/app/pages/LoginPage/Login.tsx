@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { User } from "../../../types";
-import { verifyLogin } from "../../api/api";
+import { verifyLogin } from "../../utils/api";
 import BackButton from "../../components/BackButton/BackButton";
 import Button from "../../components/Button/Button";
 import LabeledInput from "../../components/LabeledInput/LabeledInput";
