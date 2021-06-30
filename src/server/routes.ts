@@ -22,9 +22,17 @@ router.get("/users/me", async (request, response, next) => {
   }
 });
 
-router.get("/users", async (_request, response) => {
-  const users = await readUsers();
-  response.json(users);
+router.get("/users", async (request, response) => {
+  const { userId } = request.cookies;
+  const user = await readUser({ _id: new ObjectId(userId) });
+  if (!user) {
+    response.status(404).end();
+    return;
+  }
+
+  const oppositeUserType = user.type === "dog" ? "sitter" : "dog";
+  const users = await readUsers({ type: oppositeUserType });
+  response.status(200).json(users);
 });
 
 router.get("/users/:email", async (request, response) => {

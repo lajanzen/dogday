@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./ProfileCard.module.css";
 
-export type ProfileCardDogProps = {
+export type ProfileCardProps = {
   imgSrc?: string;
   name: string;
   mail: string;
@@ -21,7 +21,7 @@ function ProfileCardDog({
   type,
   experience,
   age,
-}: ProfileCardDogProps): JSX.Element {
+}: ProfileCardProps): JSX.Element {
   return (
     <div className={styles.container}>
       <div className={styles.user}>

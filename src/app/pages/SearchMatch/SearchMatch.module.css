@@ -1,8 +1,9 @@
 .container {
   height: 100vh;
   display: grid;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: auto 1fr auto;
   gap: 1em;
+  padding-bottom: 1em;
 }
 
 .header {
@@ -10,17 +11,21 @@
 }
 
 .main {
-  display: grid;
-  grid-template-rows: 1fr auto;
-  gap: 1em;
-  padding-bottom: 1em;
+  position: relative;
 }
 
 .main__profile {
-  justify-self: center;
+  margin: 0 auto;
   width: calc(100% - 4em);
+  height: 100%;
 }
 
 .main__decisionBoard {
   margin-right: 2em;
+}
+
+.main > * {
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
