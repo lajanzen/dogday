@@ -4,6 +4,7 @@ import NavBar from "../../components/NavBar/NavBar";
 import ProfileCard from "../../components/ProfileCard/ProfileCard";
 import { UserType } from "../../../types";
 import DogIcon from "../../components/Icons/DogIcon";
+import { calculateAge } from "../../utils/dates";
 
 function Profile(): JSX.Element {
   const [user, setUser] = useState<UserType | null>(null);
@@ -13,11 +14,6 @@ function Profile(): JSX.Element {
       .then((response) => response.json())
       .then((user) => setUser(user));
   }, []);
-
-  function calculateAge(birthYear: number): number {
-    const currentYear = new Date().getFullYear();
-    return currentYear - birthYear;
-  }
 
   if (!user) {
     return <p>No user found</p>;
