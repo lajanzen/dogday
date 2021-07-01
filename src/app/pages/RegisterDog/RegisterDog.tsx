@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { UserDog } from "../../../types";
-import { postUser } from "../../utils/api";
+import { postUser, uploadProfilePicture } from "../../utils/api";
 import BackButton from "../../components/BackButton/BackButton";
 import Button from "../../components/Button/Button";
 import DogIcon from "../../components/Icons/DogIcon";
@@ -16,11 +16,13 @@ function RegisterDog(): JSX.Element {
   const [city, setCity] = useState("");
   const [birthYear, setBirthYear] = useState(20);
   const [password, setPassword] = useState("");
+  const [photo, setPhoto] = useState("");
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
     const user: UserDog = {
+      photo,
       name,
       email,
       phone,
@@ -32,6 +34,19 @@ function RegisterDog(): JSX.Element {
     postUser(user);
     history.push("/");
   }
+
+  async function handlePictureUpload(
+    event: React.ChangeEvent<HTMLInputElement>
+  ) {
+    const pictureFile = event.target.files?.item(0);
+    if (!pictureFile) {
+      return;
+    }
+    const picturePath = await uploadProfilePicture(pictureFile);
+    setPhoto(picturePath.secure_url);
+    console.log(picturePath.secure_url);
+  }
+
   return (
     <div>
       <div className={styles.container}>
@@ -83,6 +98,17 @@ function RegisterDog(): JSX.Element {
               onChange={setPassword}
               required
             />
+            <div className={styles.main__form_labeledInput}>
+              <label className={styles.main__form_label} htmlFor="file">
+                Bild von deinem Hund
+              </label>
+              <input
+                className={styles.main__form_input}
+                type="file"
+                onChange={handlePictureUpload}
+                id="file"
+              />
+            </div>
             <Button variant="primary">Hund registrieren</Button>
           </form>
         </main>

@@ -8,9 +8,32 @@
 
 .main__form {
   display: grid;
-  grid-template-rows: 7em repeat(5, auto) 6em;
+  grid-template-rows: 7em repeat(6, auto) 6em;
   align-items: flex-end;
   row-gap: 1.5em;
+}
+
+.main__form_labeledInput {
+  display: grid;
+  gap: 0.5em;
+}
+
+.main__form_label {
+  padding-left: 1em;
+  color: var(--button-text-color);
+  font-family: var(--font-family);
+  font-size: 0.7em;
+}
+
+.main__form_input {
+  color: transparent;
+  padding-left: 0.5em;
+}
+
+::-webkit-file-upload-button {
+  padding: 0.8em;
+  border-radius: 3em;
+  border: solid 0.02em var(--primary-text-color);
 }
 
 .header {
