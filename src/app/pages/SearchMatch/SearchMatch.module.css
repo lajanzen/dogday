@@ -2,8 +2,8 @@
   height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  gap: 1em;
-  padding-bottom: 0.5em;
+  gap: 1.7em;
+  padding-bottom: 1.7em;
 }
 
 .header {
