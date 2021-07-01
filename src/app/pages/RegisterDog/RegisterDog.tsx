@@ -44,7 +44,6 @@ function RegisterDog(): JSX.Element {
     }
     const picturePath = await uploadProfilePicture(pictureFile);
     setPhoto(picturePath.secure_url);
-    console.log(picturePath.secure_url);
   }
 
   return (
