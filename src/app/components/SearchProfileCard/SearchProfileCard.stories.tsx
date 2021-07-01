@@ -7,9 +7,19 @@ export default {
 };
 
 export const Dog = (): JSX.Element => (
-  <SearchProfileCard imgSrc="/dog.png" name="Karl" info="Alter: 12 Wochen" />
+  <SearchProfileCard
+    type="dog"
+    imgSrc="/dog.png"
+    name="Karl"
+    info="Alter: 12 Wochen"
+  />
 );
 
 export const Sitter = (): JSX.Element => (
-  <SearchProfileCard imgSrc="/sitter.png" name="Jana" info="Hundeprofi" />
+  <SearchProfileCard
+    type="dog"
+    imgSrc="/sitter.png"
+    name="Jana"
+    info="Hundeprofi"
+  />
 );
