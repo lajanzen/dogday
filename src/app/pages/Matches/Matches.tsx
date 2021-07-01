@@ -3,7 +3,7 @@ import { UserType } from "../../../types";
 import DogIcon from "../../components/Icons/DogIcon";
 import MatchCard from "../../components/MatchCard/MatchCard";
 import NavBar from "../../components/NavBar/NavBar";
-import { age } from "../../utils/helpFunctions";
+import { age } from "../../utils/dates";
 import styles from "./Matches.module.css";
 
 function Matches(): JSX.Element {
