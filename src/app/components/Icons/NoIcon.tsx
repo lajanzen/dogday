@@ -5,7 +5,7 @@ function NoIcon(): JSX.Element {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="28"
-      height="328"
+      height="32"
       viewBox="0 0 34.377 34.377"
     >
       <g transform="translate(-20.066 -19.274)">
