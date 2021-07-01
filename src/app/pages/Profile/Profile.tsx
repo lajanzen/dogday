@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import styles from "./Profile.module.css";
 import NavBar from "../../components/NavBar/NavBar";
 import ProfileCard from "../../components/ProfileCard/ProfileCard";
-import { UserDog, UserSitter } from "../../../types";
+import { UserType } from "../../../types";
 import DogIcon from "../../components/Icons/DogIcon";
 
 function Profile(): JSX.Element {
-  const [user, setUser] = useState<UserSitter | UserDog | null>(null);
+  const [user, setUser] = useState<UserType | null>(null);
 
   useEffect(() => {
     fetch("/api/users/me")
