@@ -16,7 +16,7 @@ function Profile(): JSX.Element {
   }, []);
 
   if (!user) {
-    return <p>No user found</p>;
+    return <p></p>;
   }
 
   return (
