@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { UserDog, UserSitter } from "../../../types";
+import { UserType } from "../../../types";
 import DogIcon from "../../components/Icons/DogIcon";
 import MatchCard from "../../components/MatchCard/MatchCard";
 import NavBar from "../../components/NavBar/NavBar";
-import { age } from "../../utils/helpFunctions";
+import { calculateAge } from "../../utils/dates";
 import styles from "./Matches.module.css";
 
 function Matches(): JSX.Element {
-  const [users, setUsers] = useState<UserSitter[] | UserDog[]>([]);
+  const [users, setUsers] = useState<UserType[]>([]);
 
   useEffect(() => {
     fetch("/api/users")
@@ -29,7 +29,9 @@ function Matches(): JSX.Element {
             mail={user.email}
             phone={user.phone}
             info={
-              user.type === "dog" ? `${age(user.birthYear)}` : user.experience
+              user.type === "dog"
+                ? `${calculateAge(user.birthYear)}`
+                : user.experience
             }
           />
         ))}

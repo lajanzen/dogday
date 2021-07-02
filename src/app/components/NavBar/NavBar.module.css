@@ -2,17 +2,19 @@
   display: grid;
   grid-template-columns: auto 1fr;
   background-color: var(--secondary-background-color);
-  border-bottom-left-radius: 1.5em;
+  border-bottom-left-radius: 2em;
   padding-right: 0.5em;
 }
 
 .links {
   display: flex;
   gap: 1em;
-  padding: 2em 0 1.5em 2em;
+  padding-left: 1.5em;
+  align-items: center;
 }
 
 .logo {
   max-height: 5em;
   justify-self: end;
+  padding-bottom: 0.5em;
 }
