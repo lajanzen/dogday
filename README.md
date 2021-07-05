@@ -1,4 +1,4 @@
-<img width="40%" align="right" alt="logo" src="src/app/assets/smallLogo.png" />
+<img width="10%" align="right" alt="logo" src="src/app/assets/smallLogo.png" />
 
 # DogDay
 
