@@ -35,7 +35,7 @@ function SearchMatch(): JSX.Element {
   return (
     <div className={styles.container}>
       <header className={styles.header}>
-        <NavBar />
+        <NavBar activeLink="searchmatch" />
       </header>
       <main className={styles.main}>
         {users.map((user) => (
