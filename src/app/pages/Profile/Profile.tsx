@@ -22,7 +22,7 @@ function Profile(): JSX.Element {
   return (
     <div className={styles.container}>
       <header className={styles.header}>
-        <NavBar />
+        <NavBar activeLink="profile" />
       </header>
       <main className={styles.main}>
         <ProfileCard

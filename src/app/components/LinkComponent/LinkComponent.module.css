@@ -15,7 +15,7 @@
   width: 100%;
 }
 
-.link--primary:active {
+.link--primary-active {
   background-color: var(--primary-button-active-color);
 }
 
@@ -27,7 +27,7 @@
   width: 100%;
 }
 
-.link--secondary:active {
+.link--secondary-active {
   background-color: var(--secondary-button-active-color);
 }
 
@@ -41,6 +41,6 @@
   place-items: center;
 }
 
-.link--round:active {
+.link--round-active {
   background-color: var(--secondary-color);
 }

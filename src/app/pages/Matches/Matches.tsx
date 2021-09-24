@@ -18,7 +18,7 @@ function Matches(): JSX.Element {
   return (
     <div className={styles.container}>
       <header className={styles.header}>
-        <NavBar />
+        <NavBar activeLink="matches" />
       </header>
       <main className={styles.main}>
         {users.map((user) => (
